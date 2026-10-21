@@ -7,12 +7,12 @@ type BrandLogoProps = {
 export function BrandLogo({ priority = false }: BrandLogoProps) {
   return (
     <Image
-      src="/brand/orbe-logo1.png"
+      src="/brand/orbe-wordmark.png"
       alt="Orbe"
-      width={2172}
-      height={724}
+      width={1100}
+      height={296}
       className="h-auto w-32 sm:w-36"
-      priority={priority}
+      loading={priority ? "eager" : "lazy"}
       translate="no"
     />
   );

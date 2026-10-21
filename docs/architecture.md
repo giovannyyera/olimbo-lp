@@ -19,7 +19,8 @@ src/
 │   ├── sections/           # seções comerciais server-rendered
 │   ├── visuals/            # ilustrações conceituais em HTML
 │   ├── contact-cta.tsx
-│   ├── mobile-menu.tsx     # única fronteira cliente
+│   ├── mobile-menu.tsx     # menu cliente
+│   ├── scroll-motion.tsx   # revelações progressivas sem ocultar o HTML
 │   ├── section-heading.tsx
 │   ├── site-footer.tsx
 │   ├── site-header.tsx
@@ -39,9 +40,9 @@ Os ativos oficiais permanecem em `public/brand/` e `public/docs/`.
 
 ## Fronteiras de renderização
 
-`page.tsx`, todas as seções, ilustrações e dados estruturados são Server Components. O HTML principal permanece disponível sem hidratação.
+`page.tsx`, todas as seções, as imagens de aplicações e os dados estruturados são Server Components. O HTML principal permanece disponível sem hidratação.
 
-`MobileMenu` é o único Client Component. Ele mantém o estado de abertura, trata `Escape` e recebe somente navegação e configuração de contato serializáveis. `ContactCta` não importa mais todo o conteúdo do site para o bundle cliente.
+As fronteiras cliente são `MobileMenu`, `HeroProductVisual` e `ScrollMotion`. O menu mantém abertura e fechamento por `Escape`; a galeria controla apenas a imagem selecionada; o observador anima elementos uma vez ao entrarem na tela, sem handlers de scroll ou atualização de estado por frame. Ele desconecta e cancela animações quando a preferência por movimento reduzido muda. `ContactCta` recebe apenas os dados necessários.
 
 ## Conteúdo e conversão
 
@@ -59,7 +60,9 @@ Os ativos oficiais permanecem em `public/brand/` e `public/docs/`.
 
 ## Dependências e desempenho
 
-Não foram adicionadas dependências. As ilustrações usam HTML e CSS, e apenas a logo usa `next/image`.
+Não foram adicionadas dependências ao projeto. Logos e criativos usam `next/image`, dimensões reservadas e `sizes` responsivos. A primeira imagem do hero usa carregamento prioritário; as demais usam lazy loading. Microilustrações continuam em HTML e CSS. `src/config/creatives.ts` centraliza os três ativos WebP. Origem e prompts ficam em `docs/creatives.md`.
+
+`src/app/favicon.ico`, `icon.png` e `apple-icon.png` usam as convenções de metadados do Next.js e derivam do símbolo oficial preservado.
 
 O projeto não possui busca remota, banco, autenticação, Route Handlers, Server Actions, formulário ou analytics. O código evita enviar as seções estáticas ao cliente.
 

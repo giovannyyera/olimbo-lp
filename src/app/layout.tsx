@@ -8,6 +8,7 @@ import "../styles/solutions-and-problems.css";
 import "../styles/applications-and-process.css";
 import "../styles/closing-sections.css";
 import "../styles/responsive.css";
+import "../styles/creatives-and-motion.css";
 
 const manrope = Manrope({
   subsets: ["latin"],

@@ -1,38 +1,25 @@
+import Image from "next/image";
+
+import { creatives } from "@/config/creatives";
+
 type ApplicationVisualProps = {
   type: "website" | "dashboard" | "workflow";
 };
 
 export function ApplicationVisual({ type }: ApplicationVisualProps) {
-  if (type === "website") {
-    return (
-      <div className="application-visual application-website" aria-hidden="true">
-        <div className="application-bar"><span /><span /><span /></div>
-        <div className="application-nav"><i /><span /><span /></div>
-        <div className="application-hero"><b /><b /><span /><i /></div>
-        <div className="application-cards"><span /><span /><span /></div>
-      </div>
-    );
-  }
-
-  if (type === "dashboard") {
-    return (
-      <div className="application-visual application-dashboard" aria-hidden="true">
-        <aside><i /><i /><i /><i /></aside>
-        <div className="application-dashboard-main">
-          <b />
-          <div className="application-kpis"><span /><span /><span /></div>
-          <div className="application-table"><i /><i /><i /><i /></div>
-        </div>
-      </div>
-    );
-  }
+  const creative = creatives.find((item) => item.id === type)!;
 
   return (
-    <div className="application-visual application-workflow" aria-hidden="true">
-      <span>Origem</span><i />
-      <span className="workflow-center">Fluxo</span><i />
-      <span>Destino</span>
-      <b className="workflow-branch" />
+    <div className="application-visual application-image">
+      <Image
+        src={creative.src}
+        alt={creative.alt}
+        fill
+        sizes={type === "workflow"
+          ? "(min-width: 1024px) 33vw, 100vw"
+          : "(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"}
+      />
+      <span className="application-image-label" aria-hidden="true">{creative.label}</span>
     </div>
   );
 }

@@ -4,7 +4,7 @@ A V2 combina minimalismo premium, hierarquia editorial e demonstrações visuais
 
 ## Direção visual
 
-A referência oficial é `public/docs/Guia_de_Identidade_Visual_Orbe.pdf`. A interface usa `public/brand/orbe-logo1.png` em fundos claros, sem alterar proporção, cor ou conteúdo.
+A referência oficial é `public/docs/Guia_de_Identidade_Visual_Orbe.pdf`. A interface usa um recorte sem margens de `public/brand/orbe-logo1.png` em fundos claros, sem alterar proporção, cor ou conteúdo. O símbolo de `orbe-logo2.png` aparece no hero e nos favicons, sobre preto. Os originais permanecem preservados.
 
 Os grafismos usam órbitas finas, eixos, conexões e interfaces abstratas. Eles representam ideias de tecnologia sem copiar o símbolo oficial nem simular produtos existentes.
 
@@ -23,11 +23,11 @@ Os tokens globais ficam em `src/app/globals.css`. Os estilos são divididos em `
 ## Estrutura visual
 
 1. Header fixo com logo, navegação e contato
-2. Hero com composição de website, painel e fluxo
+2. Hero com galeria de criativos 3D de interfaces, painel e conexões
 3. Benefícios com quatro microilustrações
 4. Serviços em bento grid
 5. Problemas e possíveis caminhos em cartões comparativos
-6. Exemplos conceituais de site, painel e automação
+6. Exemplos conceituais de site, painel e automação com imagens WebP próprias
 7. Timeline do processo proposto
 8. Princípios da Orbe em seção dourada
 9. Perguntas frequentes
@@ -36,7 +36,10 @@ Os tokens globais ficam em `src/app/globals.css`. Os estilos são divididos em `
 ## Movimento e interação
 
 - Entrada curta do hero com `transform` e `opacity`
-- Revelação progressiva por scroll quando o navegador suporta `animation-timeline`
+- Revelação curta de títulos e cartões via `IntersectionObserver` e Web Animations, uma vez por elemento
+- Troca manual de imagens no hero com opacidade e escala, botões de seleção e legenda anunciada
+- Zoom suave nas imagens de aplicações em dispositivos com hover
+- Indicador dourado de progresso quando o navegador suporta `animation-timeline: scroll()`
 - Elevação discreta de cartões em dispositivos com hover
 - Mudança de borda e contraste em controles interativos
 - Ausência de loops automáticos, parallax e scroll hijacking
@@ -50,7 +53,7 @@ Não foi adicionada biblioteca de animação. A interface permanece completa qua
 - Duas colunas em telas intermediárias quando o conteúdo permite
 - Grid de 12 colunas para serviços em desktop
 - Timeline vertical no mobile e horizontal no desktop
-- Menu móvel como única interação dependente de JavaScript
+- Menu móvel, seleção de imagens e revelações como pequenas interações cliente
 - `overflow-x: clip` e layouts por CSS Grid para evitar medições em JavaScript
 
 ## Acessibilidade
@@ -65,8 +68,8 @@ Não foi adicionada biblioteca de animação. A interface permanece completa qua
 - Chamadas indisponíveis com nome acessível e explicação visível
 - Imagem da logo com dimensões intrínsecas
 
-## Pendência de revisão visual
+## Criativos e revisão visual
 
-O código prepara os breakpoints de 390, 768 e 1440 pixels. A sessão atual não oferece navegador integrado nem `agent-browser`, portanto nenhuma revisão visual nessas larguras foi alegada.
+Os ativos gerados, prompts e derivações da marca são descritos em `docs/creatives.md`. As evidências de revisão visual e validação ficam em `docs/setup.md`.
 
 Atualize este documento quando uma regra visual ou de interação mudar.

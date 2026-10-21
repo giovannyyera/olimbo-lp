@@ -27,11 +27,11 @@ Não há contas, papéis de usuário ou áreas autenticadas.
 
 ## Escopo implementado na V2
 
-- Hero comercial com composição visual de site, software e automação
+- Hero comercial com galeria interativa de três criativos de site, software e automação
 - Benefícios com quatro ilustrações próprias
 - Bento grid de serviços com mensagens contextuais de contato
 - Comparação entre cinco problemas e possíveis caminhos digitais
-- Três demonstrações conceituais identificadas como ilustrativas
+- Três demonstrações conceituais com imagens próprias identificadas como ilustrativas
 - Processo proposto em quatro etapas
 - Princípios da Orbe sem prova social inventada
 - Sete perguntas frequentes
@@ -81,8 +81,9 @@ A interface usa composição editorial, fundos claros, contraste alto e detalhes
 - Next.js 16.4.2, App Router, React 19.3 e TypeScript estrito
 - Tailwind CSS 4, CSS próprio, ESLint 10 e Vitest 4
 - Server Components por padrão
-- JavaScript cliente restrito ao menu móvel
-- Ilustrações em HTML e CSS, sem biblioteca visual ou de animação
+- JavaScript cliente restrito ao menu móvel, seleção da galeria e revelações por scroll
+- Criativos WebP e microilustrações em HTML/CSS, sem biblioteca visual ou de animação
+- Favicon e ícones de dispositivo derivados do símbolo oficial
 - Conteúdo verificável centralizado em `src/config/site.ts`
 
 ## Critérios de aceitação
@@ -101,6 +102,5 @@ A interface usa composição editorial, fundos claros, contraste alto e detalhes
 - Número oficial de WhatsApp e mensagem final aprovada
 - Domínio canônico para canonical, sitemap e URLs absolutas
 - Eventuais imagens, portfólio e informações comerciais aprovadas
-- Revisão visual em 390, 768 e 1440 pixels
 
 Atualize este documento quando objetivo, público, escopo ou restrições mudarem. Registre evidências técnicas em `docs/setup.md`.

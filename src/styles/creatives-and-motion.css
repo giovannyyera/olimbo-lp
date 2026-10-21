@@ -1,0 +1,193 @@
+.hero-showcase {
+  width: min(100%, 34rem);
+  min-width: 0;
+  margin: 0 auto;
+  animation: visual-enter 850ms 120ms ease-out both;
+}
+
+.showcase-stage {
+  position: relative;
+  isolation: isolate;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border: 1px solid var(--orbe-line);
+  border-radius: 1.5rem;
+  background: #eee9df;
+  box-shadow: 0 2rem 5rem rgb(11 11 11 / 9%);
+}
+
+.showcase-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.06);
+  transition: opacity 600ms ease, transform 900ms ease, visibility 600ms;
+}
+
+.showcase-slide[data-active="true"] {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+.showcase-slide img {
+  object-fit: cover;
+}
+
+.showcase-brand {
+  position: absolute;
+  z-index: 1;
+  top: 1rem;
+  left: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.5rem 0.85rem 0.5rem 0.5rem;
+  border: 1px solid rgb(255 255 255 / 50%);
+  border-radius: 99px;
+  background: rgb(247 246 242 / 94%);
+  color: var(--orbe-black);
+  font-size: 0.65rem;
+  font-weight: 800;
+}
+
+.showcase-counter {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 99px;
+  background: var(--orbe-black);
+  color: var(--orbe-gold);
+  font-size: 0.65rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.showcase-brand img {
+  border-radius: 50%;
+}
+
+.showcase-controls {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.3rem;
+  margin-top: 1rem;
+  padding: 0.3rem;
+  border: 1px solid var(--orbe-line);
+  border-radius: 99px;
+  background: var(--orbe-paper);
+}
+
+.showcase-controls button {
+  min-height: 2.75rem;
+  padding: 0.5rem 0.3rem;
+  border-radius: 99px;
+  background: transparent;
+  color: var(--orbe-graphite);
+  cursor: pointer;
+  font-size: clamp(0.65rem, 1.6vw, 0.75rem);
+  font-weight: 800;
+  transition: background 220ms, color 220ms;
+}
+
+.showcase-controls button span {
+  margin-right: 0.2rem;
+  font-size: 0.6rem;
+}
+
+.showcase-controls button[aria-pressed="true"] {
+  background: var(--orbe-black);
+  color: var(--orbe-gold);
+}
+
+.hero-showcase figcaption {
+  display: grid;
+  gap: 0.4rem;
+  min-height: 4.5rem;
+  padding: 1.2rem 0.25rem 0;
+}
+
+.hero-showcase figcaption strong {
+  font-size: 0.88rem;
+  font-weight: 650;
+}
+
+.hero-showcase figcaption > span {
+  color: var(--orbe-graphite);
+  font-size: 0.68rem;
+}
+
+.application-image {
+  height: auto;
+  aspect-ratio: 3 / 2;
+}
+
+.application-image img {
+  object-fit: cover;
+  transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.application-image-label {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  padding: 0.45rem 0.7rem;
+  border-radius: 99px;
+  background: var(--orbe-black);
+  color: var(--orbe-gold);
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.reading-progress {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 100;
+  height: 3px;
+  background: var(--orbe-gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  pointer-events: none;
+}
+
+@supports (animation-timeline: scroll()) {
+  .reading-progress {
+    animation: reading-progress linear both;
+    animation-timeline: scroll();
+  }
+}
+
+@keyframes reading-progress {
+  to { transform: scaleX(1); }
+}
+
+@media (hover: hover) {
+  .application-card:hover .application-image img {
+    transform: scale(1.06);
+  }
+
+  .showcase-controls button:hover {
+    background: var(--orbe-gold);
+    color: var(--orbe-black);
+  }
+
+  .brand-link img {
+    transition: transform 250ms ease;
+  }
+
+  .brand-link:hover img {
+    transform: translateY(-2px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reading-progress { display: none; }
+  .hero-showcase { animation: none; }
+  .showcase-slide { transform: none; transition: none; }
+  .application-card:hover .application-image img,
+  .brand-link:hover img { transform: none; }
+}

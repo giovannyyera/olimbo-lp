@@ -8,18 +8,6 @@
   to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-@keyframes section-reveal {
-  from { opacity: 0; transform: translateY(1.5rem); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@supports (animation-timeline: view()) {
-  .reveal {
-    animation: section-reveal linear both;
-    animation-range: entry 8% cover 28%;
-    animation-timeline: view();
-  }
-}
 
 @media (hover: hover) {
   .desktop-nav a:hover,
