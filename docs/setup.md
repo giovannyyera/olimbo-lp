@@ -82,3 +82,22 @@ O servidor da própria Orbe já estava ativo em `localhost:3000` durante a evolu
 ## Condição de revisão
 
 Mudanças de stack, comandos, estrutura, marca, canal de contato ou escopo invalidam a evidência correspondente. Atualize este documento junto com a mudança; não converta uma pendência externa em integração simulada.
+
+## Criativos e movimento — 21/10/2026
+
+Esta atualização substitui as limitações da revisão visual inicial para as áreas verificadas abaixo.
+
+- Três imagens geradas com `image_gen`, inspecionadas e salvas como WebP em `public/images/`; origem e prompts completos em `docs/creatives.md`. As três juntas somam aproximadamente 180 KB.
+- Galeria manual no hero com transição de opacidade e escala, seleção por teclado e legenda anunciada. As imagens também aparecem nos exemplos de aplicações.
+- Revelações por `IntersectionObserver` e Web Animations, sem ocultação inicial do conteúdo e sem biblioteca nova. A mudança para movimento reduzido cancela animações em execução. Há zoom no hover e indicador de progresso CSS nos navegadores compatíveis.
+- Logo oficial preservada; apenas margens vazias foram removidas no arquivo derivado usado pelo header e rodapé. O favicon, o ícone PNG e o ícone Apple derivam do símbolo oficial sobre preto.
+- Guias consultados na versão instalada: `node_modules/next/dist/docs/01-app/01-getting-started/12-images.md` e `01-app/03-api-reference/03-file-conventions/01-metadata/app-icons.md`. O uso alterado de `next/image` evita a propriedade `priority`, depreciada nesta versão.
+- Lint, TypeScript, lint tipado, regras locais, sete testes e build estático executados com sucesso. O primeiro build identificou a exigência de PNG RGBA dentro do ICO; o ativo foi corrigido e o build passou.
+- Chromium via Playwright temporário, sem dependência adicionada ao projeto: hero e aplicações inspecionados em 390, 768 e 1440 px; troca por mouse e teclado; imagens carregadas; um H1; ausência de overflow horizontal e de erros JavaScript. Capturas locais em `/tmp/orbe-{largura}.png` e `/tmp/orbe-applications-{largura}.png` são evidência temporária, não ativos da aplicação.
+- Movimento reduzido verificado com emulação: galeria responde imediatamente, animações em execução são canceladas e a barra de progresso fica desativada. Conteúdo e primeiro criativo também conferidos com JavaScript desabilitado.
+- `/favicon.ico`, `/icon.png` e `/apple-icon.png` responderam 200 com os tipos de imagem esperados. O endpoint MCP do Next.js retornou `issues: []` para `get_compilation_issues`.
+- `next-dev-loop` não foi executado como fluxo completo: `agent-browser` não estava no PATH. O navegador integrado não expôs a ferramenta de execução exigida pela skill. A revisão visual acima foi feita com Playwright independente, sem alegar introspecção React do fluxo da skill.
+- O servidor existente em `localhost:3000` pertence a `/Users/giovanyyera/Downloads/orbe-lp` e foi preservado. A prévia deste checkout usa `http://localhost:3001`.
+- `npm audit` encontrou cinco alertas altos na cadeia de desenvolvimento `eslint-config-next → fast-glob → micromatch → braces`. A correção automática sugeria downgrade incompatível de Next/ESLint; nenhuma dependência foi alterada nesta tarefa. Reavaliar antes de publicação.
+
+Rever estas evidências se imagens, ícones, layout, movimento, versões ou fronteiras cliente forem alterados. Não houve deploy ou integração comercial nova.
