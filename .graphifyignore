@@ -1,0 +1,24 @@
+# Secrets, generated content, dependencies and local tooling
+.git/
+.next/
+node_modules/
+out/
+dist/
+build/
+coverage/
+graphify-out/
+.agents/
+.claude/
+.codex/
+.vercel/
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+auth.json
+credentials.json
+*.log
+*.tsbuildinfo
+package-lock.json

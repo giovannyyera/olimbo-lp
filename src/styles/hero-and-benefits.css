@@ -1,0 +1,259 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--orbe-line);
+  background:
+    radial-gradient(circle at 82% 18%, rgb(250 194 2 / 14%), transparent 28rem),
+    var(--orbe-ivory);
+}
+
+.hero-grid {
+  display: grid;
+  min-height: calc(100svh - var(--header-height));
+  align-items: center;
+  gap: 3.5rem;
+  padding-block: 4rem 3rem;
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 2;
+  animation: hero-enter 700ms ease-out both;
+}
+
+.hero-eyebrow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 1.25rem;
+  color: var(--orbe-graphite);
+}
+
+.hero-eyebrow span {
+  color: var(--orbe-gold-deep);
+}
+
+.hero h1 {
+  max-width: 12ch;
+  margin: 0;
+  font-size: clamp(3.25rem, 14vw, 6.4rem);
+  font-weight: 650;
+  letter-spacing: -0.07em;
+  line-height: 0.92;
+}
+
+.hero-description {
+  max-width: 43rem;
+  margin: 1.75rem 0 0;
+  color: var(--orbe-graphite);
+  font-size: clamp(1.05rem, 2.2vw, 1.22rem);
+  line-height: 1.72;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.4rem;
+  margin-top: 2rem;
+}
+
+.hero-copy .contact-note {
+  margin-top: 0.8rem;
+}
+
+.hero-capabilities {
+  display: grid;
+  gap: 0;
+  padding-bottom: 1.5rem;
+}
+
+.hero-capabilities span {
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--orbe-line);
+  color: var(--orbe-graphite);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero-product-visual {
+  position: relative;
+  width: min(100%, 34rem);
+  min-height: 28rem;
+  margin: 0 auto;
+  animation: visual-enter 760ms 100ms ease-out both;
+}
+
+.hero-visual-orbit {
+  position: absolute;
+  inset: 3% 5% 8%;
+  border: 1px solid rgb(11 11 11 / 16%);
+  border-radius: 50%;
+}
+
+.hero-visual-orbit::before,
+.hero-visual-orbit::after {
+  position: absolute;
+  border: 1px solid rgb(11 11 11 / 11%);
+  border-radius: 50%;
+  content: "";
+}
+
+.hero-visual-orbit::before { inset: 16%; }
+.hero-visual-orbit::after { inset: 34%; }
+
+.concept-window {
+  position: absolute;
+  overflow: hidden;
+  border: 1px solid rgb(11 11 11 / 18%);
+  border-radius: 0.75rem;
+  background: var(--orbe-paper);
+  box-shadow: 0 1.5rem 4rem rgb(11 11 11 / 12%);
+}
+
+.concept-website {
+  top: 3%;
+  left: 0;
+  width: 76%;
+  height: 57%;
+  transform: rotate(-2deg);
+}
+
+.concept-dashboard {
+  right: 0;
+  bottom: 8%;
+  width: 68%;
+  height: 48%;
+  transform: rotate(2deg);
+}
+
+.concept-toolbar {
+  display: flex;
+  height: 1.75rem;
+  align-items: center;
+  gap: 0.28rem;
+  padding: 0 0.6rem;
+  border-bottom: 1px solid var(--orbe-line);
+  background: #f0efe9;
+}
+
+.concept-toolbar span {
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 50%;
+  background: rgb(11 11 11 / 26%);
+}
+
+.concept-toolbar small {
+  margin-left: auto;
+  color: var(--orbe-muted);
+  font-size: 0.48rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.concept-site-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.75rem;
+}
+
+.concept-site-nav i {
+  width: 1.7rem;
+  height: 0.45rem;
+  margin-right: auto;
+  border-radius: 99px;
+  background: var(--orbe-black);
+}
+
+.concept-site-nav span {
+  width: 1.5rem;
+  height: 0.18rem;
+  border-radius: 99px;
+  background: rgb(11 11 11 / 24%);
+}
+
+.concept-site-copy {
+  display: grid;
+  gap: 0.48rem;
+  padding: 1.2rem 1rem;
+}
+
+.concept-site-copy b,
+.concept-site-copy span {
+  display: block;
+  border-radius: 99px;
+  background: var(--orbe-black);
+}
+
+.concept-site-copy b { width: 84%; height: 0.65rem; }
+.concept-site-copy b:nth-child(2) { width: 62%; }
+.concept-site-copy span { width: 72%; height: 0.22rem; background: rgb(11 11 11 / 22%); }
+.concept-site-copy span:nth-child(4) { width: 54%; }
+.concept-site-copy i { width: 4rem; height: 1.3rem; margin-top: 0.5rem; border-radius: 0.2rem; background: var(--orbe-gold); }
+
+.concept-dashboard-body { display: grid; grid-template-columns: 2.2rem 1fr; height: calc(100% - 1.75rem); }
+.concept-sidebar { border-right: 1px solid var(--orbe-line); background: var(--orbe-black); }
+.concept-dashboard-content { padding: 0.75rem; }
+.concept-dashboard-content > b { display: block; width: 38%; height: 0.3rem; margin-bottom: 0.75rem; border-radius: 99px; background: var(--orbe-black); }
+.concept-metric-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.35rem; }
+.concept-metric-row i { height: 1.8rem; border: 1px solid var(--orbe-line); border-radius: 0.25rem; background: #f6f4ec; }
+.concept-chart { display: flex; height: 3.5rem; align-items: end; gap: 0.4rem; margin-top: 0.7rem; padding: 0.5rem; border: 1px solid var(--orbe-line); }
+.concept-chart span { flex: 1; background: var(--orbe-gold); }
+.concept-chart span:nth-child(1) { height: 35%; }
+.concept-chart span:nth-child(2) { height: 60%; }
+.concept-chart span:nth-child(3) { height: 48%; }
+.concept-chart span:nth-child(4) { height: 82%; }
+
+.concept-flow {
+  position: absolute;
+  right: 4%;
+  bottom: 1%;
+  left: 4%;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+}
+
+.flow-node {
+  padding: 0.5rem 0.6rem;
+  border: 1px solid var(--orbe-line);
+  border-radius: 0.3rem;
+  background: var(--orbe-paper);
+  font-size: 0.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.flow-node-gold { background: var(--orbe-gold); }
+.concept-flow i { width: 1rem; height: 1px; background: var(--orbe-black); }
+.hero-product-visual figcaption { position: absolute; bottom: -1.5rem; width: 100%; color: var(--orbe-muted); font-size: 0.68rem; text-align: center; }
+
+.benefits-section { background: var(--orbe-paper); }
+.benefits-grid { display: grid; gap: 1rem; }
+.benefit-card { position: relative; min-height: 24rem; padding: 1.25rem; overflow: hidden; border: 1px solid var(--orbe-line); background: var(--orbe-ivory); transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease; }
+.card-index { color: var(--orbe-muted); font-size: 0.68rem; font-weight: 800; letter-spacing: 0.1em; }
+.benefit-card h3 { margin: 1.5rem 0 0.8rem; font-size: 1.45rem; letter-spacing: -0.035em; }
+.benefit-card > p { margin: 0; color: var(--orbe-graphite); line-height: 1.65; }
+.benefit-visual { position: relative; height: 10rem; margin-top: 1.2rem; border-bottom: 1px solid var(--orbe-line); }
+.benefit-opportunities .benefit-browser { position: absolute; inset: 1rem 10% 1rem 0; border: 1px solid var(--orbe-line); border-radius: 0.4rem; background: linear-gradient(135deg, white 55%, #f1efe8 55%); }
+.benefit-opportunities .benefit-pointer { position: absolute; right: 18%; bottom: 1.4rem; font-size: 1.8rem; font-style: normal; }
+.benefit-opportunities b { position: absolute; right: 0; bottom: 0.8rem; padding: 0.45rem 0.65rem; background: var(--orbe-gold); font-size: 0.58rem; text-transform: uppercase; }
+.benefit-automation { display: flex; align-items: center; justify-content: center; gap: 0.5rem; }
+.benefit-automation span, .benefit-automation b { display: grid; width: 2.8rem; height: 2.8rem; place-items: center; border: 1px solid var(--orbe-line); border-radius: 50%; background: white; }
+.benefit-automation b { background: var(--orbe-gold); }
+.benefit-automation i { width: 1.4rem; height: 1px; background: var(--orbe-black); }
+.benefit-organization { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem; padding: 1rem; }
+.benefit-organization span { border: 1px solid var(--orbe-line); border-radius: 0.35rem; background: white; }
+.benefit-organization span:first-child { grid-row: span 2; background: var(--orbe-gold); }
+.benefit-custom span { position: absolute; border: 1px solid var(--orbe-line); border-radius: 50%; }
+.benefit-custom span:nth-child(1) { inset: 0.5rem 18%; }
+.benefit-custom span:nth-child(2) { inset: 2rem 29%; }
+.benefit-custom span:nth-child(3) { inset: 3.5rem 40%; }
+.benefit-custom b { position: absolute; inset: 50% auto auto 50%; padding: 0.3rem; background: var(--orbe-ivory); font-size: 0.6rem; transform: translate(-50%, -50%); }

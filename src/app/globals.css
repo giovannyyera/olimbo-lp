@@ -1,0 +1,151 @@
+@import "tailwindcss";
+
+:root {
+  --orbe-black: #0b0b0b;
+  --orbe-gold: #fac202;
+  --orbe-gold-deep: #d9a700;
+  --orbe-ivory: #f7f6f2;
+  --orbe-paper: #fffefa;
+  --orbe-graphite: #414141;
+  --orbe-muted: #727272;
+  --orbe-line: rgb(11 11 11 / 14%);
+  --header-height: 4.75rem;
+}
+
+@theme inline {
+  --color-orbe-black: var(--orbe-black);
+  --color-orbe-gold: var(--orbe-gold);
+  --color-orbe-ivory: var(--orbe-ivory);
+  --color-orbe-graphite: var(--orbe-graphite);
+  --font-sans: var(--font-manrope);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + 1rem);
+  background: var(--orbe-ivory);
+  color: var(--orbe-black);
+}
+
+body {
+  min-height: 100svh;
+  margin: 0;
+  overflow-x: clip;
+  background: var(--orbe-ivory);
+  font-family: var(--font-manrope), Arial, Helvetica, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+a {
+  font: inherit;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: rgb(250 194 2 / 22%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  border: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+::selection {
+  background: var(--orbe-gold);
+  color: var(--orbe-black);
+}
+
+:focus-visible {
+  outline: 3px solid var(--orbe-gold);
+  outline-offset: 4px;
+}
+
+.section-anchor {
+  scroll-margin-top: calc(var(--header-height) + 1rem);
+}
+
+.shell {
+  width: min(100% - 2rem, 80rem);
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: 5.5rem;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--orbe-graphite);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.eyebrow-dark {
+  color: var(--orbe-gold);
+}
+
+.section-heading {
+  display: grid;
+  max-width: 52rem;
+  margin-bottom: 3rem;
+}
+
+.section-heading h2 {
+  max-width: 16ch;
+  margin: 1rem 0 0;
+  font-size: clamp(2.25rem, 8vw, 4.7rem);
+  font-weight: 650;
+  letter-spacing: -0.055em;
+  line-height: 0.98;
+}
+
+.section-description {
+  max-width: 44rem;
+  margin: 1.4rem 0 0;
+  color: var(--orbe-graphite);
+  font-size: clamp(1rem, 2vw, 1.12rem);
+  line-height: 1.75;
+}
+
+.section-heading-dark .eyebrow,
+.section-heading-dark .section-description {
+  color: rgb(255 255 255 / 66%);
+}
+
+.section-heading-dark h2 {
+  color: white;
+}
+
+.contact-note,
+.contact-status {
+  margin: 0;
+  color: var(--orbe-muted);
+  font-size: 0.75rem;
+  line-height: 1.5;
+}

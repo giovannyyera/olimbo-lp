@@ -77,6 +77,7 @@ web_modules/
 # Next.js build output
 .next
 out
+.vercel/
 
 # Nuxt.js build / generate output
 .nuxt
@@ -147,3 +148,40 @@ vite.config.ts.timestamp-*
 
 # Turbo Repo
 .turbo
+
+# Local analysis output
+graphify-out/
+
+# Next.js generated types
+next-env.d.ts
+
+# Local editor settings
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local temporary files
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# Private certificates and keys
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Local agent temporary files
+.agents/**/cache/
+.agents/**/tmp/
+.agents/**/logs/
+
+# Test artifacts
+test-results/
+playwright-report/

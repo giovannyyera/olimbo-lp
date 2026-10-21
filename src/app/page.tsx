@@ -1,0 +1,34 @@
+import { ApplicationsSection } from "@/components/sections/applications-section";
+import { BenefitsSection } from "@/components/sections/benefits-section";
+import { FaqSection } from "@/components/sections/faq-section";
+import { FinalCtaSection } from "@/components/sections/final-cta-section";
+import { HeroSection } from "@/components/sections/hero-section";
+import { ProblemSolutionSection } from "@/components/sections/problem-solution-section";
+import { ProcessSection } from "@/components/sections/process-section";
+import { SolutionsSection } from "@/components/sections/solutions-section";
+import { WhyOrbeSection } from "@/components/sections/why-orbe-section";
+import { SiteFooter } from "@/components/site-footer";
+import { SiteHeader } from "@/components/site-header";
+import { StructuredData } from "@/components/structured-data";
+
+export default function Home() {
+  return (
+    <>
+      <StructuredData />
+      <a className="skip-link" href="#conteudo">Ir para o conteúdo</a>
+      <SiteHeader />
+      <main id="conteudo">
+        <HeroSection />
+        <BenefitsSection />
+        <SolutionsSection />
+        <ProblemSolutionSection />
+        <ApplicationsSection />
+        <ProcessSection />
+        <WhyOrbeSection />
+        <FaqSection />
+        <FinalCtaSection />
+      </main>
+      <SiteFooter />
+    </>
+  );
+}
