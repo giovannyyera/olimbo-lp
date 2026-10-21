@@ -230,14 +230,16 @@ export const siteConfig = {
     {
       question: "Como solicitar um orçamento?",
       answer:
-        "O canal principal será o WhatsApp. Assim que o número oficial estiver configurado, você poderá iniciar a conversa pelos botões desta página e compartilhar o contexto do projeto.",
+        "Use os botões desta página para abrir o WhatsApp com uma mensagem pronta e compartilhar o contexto do projeto. Por enquanto, o destino usa um número de exemplo.",
     },
   ],
   contact: {
     whatsapp: {
-      phone: null as string | null,
+      // Número de exemplo: substitua pelo WhatsApp oficial antes de publicar.
+      phone: "+55 (11) 99999-9999" as string | null,
       message:
         "Olá, Orbe! Quero conversar sobre uma solução digital para o meu projeto.",
+      note: "WhatsApp configurado com número de exemplo para demonstração.",
       unavailableMessage:
         "O canal oficial de WhatsApp ainda está sendo confirmado.",
     },

@@ -28,7 +28,7 @@ export function FinalCtaSection() {
             className="final-cta-button"
           />
           <p className="contact-status">
-            {siteConfig.contact.whatsapp.unavailableMessage}
+            {siteConfig.contact.whatsapp.note}
           </p>
         </div>
       </div>

@@ -22,12 +22,14 @@ export function HeroSection() {
               contact={siteConfig.contact.whatsapp}
               label="Quero tirar meu projeto do papel"
             />
-            <a className="text-link" href="#solucoes">
-              Conhecer nossas soluções <span aria-hidden="true">↓</span>
-            </a>
+            <ContactCta
+              contact={siteConfig.contact.whatsapp}
+              label="Conversar sobre as soluções"
+              variant="outline"
+            />
           </div>
           <p className="contact-note">
-            {siteConfig.contact.whatsapp.unavailableMessage}
+            {siteConfig.contact.whatsapp.note}
           </p>
         </div>
         <HeroProductVisual />

@@ -41,7 +41,7 @@ Não há contas, papéis de usuário ou áreas autenticadas.
 
 ## Contato comercial
 
-O WhatsApp é o canal principal planejado. Enquanto o número oficial não for fornecido, todas as chamadas para ação permanecem desabilitadas, informam o motivo e não criam destinos fictícios.
+O WhatsApp é o destino de todas as chamadas comerciais, com mensagem pronta. Por solicitação do usuário, os CTAs usam temporariamente um número brasileiro de exemplo, definido somente em `src/config/site.ts`, em `contact.whatsapp.phone`. A interface identifica o uso demonstrativo; substitua o número antes de publicar.
 
 Cada serviço possui uma mensagem contextual pronta em `src/config/site.ts`. O helper só produz uma URL do domínio `wa.me` depois de validar um número internacional.
 
@@ -92,7 +92,7 @@ A interface usa composição editorial, fundos claros, contraste alto e detalhes
 - A navegação funciona por teclado e mantém foco visível
 - O layout não cria overflow horizontal e respeita movimento reduzido
 - Exemplos conceituais não parecem cases reais
-- Nenhum contato, resultado ou dado comercial é inventado
+- Nenhum resultado ou dado comercial é inventado; o contato temporário de exemplo é identificado como demonstrativo
 - Lint, tipos, testes e build passam sem credenciais externas
 - A responsividade deve ser revisada visualmente quando houver navegador disponível
 

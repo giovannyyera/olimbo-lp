@@ -47,7 +47,7 @@ Os ativos oficiais permanecem em `public/brand/` e `public/docs/`.
 
 `src/config/site.ts` centraliza benefícios, soluções, mensagens de WhatsApp, problemas, exemplos, processo, princípios e perguntas frequentes. Os componentes apenas apresentam esses dados.
 
-`ContactCta` recebe a configuração do WhatsApp e uma mensagem contextual opcional. Sem número válido, renderiza um botão desabilitado. Com número válido, usa `createWhatsAppUrl` e abre o canal oficial em nova aba.
+`ContactCta` recebe a configuração do WhatsApp e uma mensagem contextual opcional. Sem número válido, renderiza um botão desabilitado. Com número válido, usa `createWhatsAppUrl` e abre o WhatsApp em nova aba, com mensagem pronta. O número temporário de exemplo fica somente em `siteConfig.contact.whatsapp.phone`; as notas no hero e na chamada final identificam a demonstração.
 
 ## SEO técnico
 

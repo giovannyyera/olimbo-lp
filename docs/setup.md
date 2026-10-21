@@ -26,7 +26,7 @@ O PDF foi renderizado apenas para inspeção local. Seus artefatos temporários 
 - Zod, logger, biblioteca de classes, biblioteca de UI, ícones e animação foram omitidos por não sustentarem um fluxo atual.
 - Não existe `.env.example`: o projeto não usa variáveis de ambiente.
 - React Compiler e Cache Components permaneceram desativados sem evidência de necessidade.
-- O WhatsApp oficial ainda não foi fornecido. O campo fica `null`, e a interface comunica indisponibilidade sem criar número fictício.
+- O WhatsApp oficial ainda não foi fornecido. Em 21/10/2026, por solicitação explícita do usuário, os CTAs foram habilitados com um número brasileiro de exemplo centralizado em `src/config/site.ts`. A interface identifica a demonstração. Revisar e substituir o número antes de publicar.
 - Formulário, e-mail, gestão de relacionamento com clientes, analytics, gestão de conteúdo, chat e metadados dependentes de domínio foram adiados.
 
 ## Skills locais
@@ -45,7 +45,7 @@ Também permanecem disponíveis para demandas específicas `next-bundle-optimize
 
 - V2 comercial com hero, benefícios, bento grid de soluções, comparação de problemas, exemplos conceituais, processo, princípios, perguntas frequentes e chamada final.
 - Ilustrações próprias em HTML e CSS para sites, painéis e fluxos, todas identificadas como conceituais.
-- Mensagens contextuais de WhatsApp por serviço, mantidas inativas até a inclusão do número oficial.
+- Mensagens contextuais de WhatsApp por serviço e mensagem geral, com CTAs habilitados para o número temporário de exemplo.
 - Metadados comerciais, `robots.txt` e JSON-LD `FAQPage` sem canonical, sitemap ou URLs fictícias.
 - Server Components em toda a página e menu móvel como única fronteira cliente.
 - CSS dividido por responsabilidade, sem dependência visual ou de animação.
@@ -73,11 +73,19 @@ O servidor da própria Orbe já estava ativo em `localhost:3000` durante a evolu
 
 ## Riscos e pendências
 
-- Fornecer e aprovar o número oficial de WhatsApp antes de habilitar os CTAs.
+- Substituir o número de exemplo pelo WhatsApp oficial e revisar as notas demonstrativas antes de publicar.
 - Informar domínio canônico antes de configurar URLs absolutas de otimização para mecanismos de busca e compartilhamento.
 - Aprovar qualquer portfólio, case, depoimento, métrica ou canal comercial antes de publicar.
 - Reavaliar dependências e auditoria antes de uma entrega pública.
 - Executar deploy apenas mediante autorização explícita.
+
+## Ajuste dos CTAs em 21/10/2026
+
+- Fonte: solicitação do usuário para direcionar todos os CTAs ao WhatsApp com mensagem e centralizar um número brasileiro de exemplo.
+- Configuração: `src/config/site.ts`, campo `contact.whatsapp.phone`; mensagens gerais e por serviço preservadas. A chamada secundária do hero também abre o WhatsApp.
+- Verificação: `npm run check` aprovado (lint, tipos, lint tipado, regras locais, 7 testes e build). O HTML gerado contém nove CTAs com destino `wa.me`, mesmo número e mensagem preenchida, sem CTA desabilitado. O menu móvel usa a mesma configuração e componente compartilhado.
+- Revisão visual não executada: navegador integrado sem ferramenta disponível nesta sessão e `agent-browser` ausente do PATH.
+- Condição de revisão: substituir o número temporário e revisar os textos demonstrativos quando o contato oficial for fornecido.
 
 ## Condição de revisão
 

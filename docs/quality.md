@@ -22,12 +22,12 @@ Os checks cobrem código, tipos, regras locais, conteúdo configurável, URLs de
 - Sem `console` em código de produção
 - HTML semântico e navegação por teclado
 - Foco visível e movimento reduzido
-- Sem contato, prova social ou dados comerciais inventados
+- Sem prova social ou dados comerciais inventados; número de contato de exemplo somente quando explicitamente solicitado e identificado
 - Sem dependências novas sem necessidade comprovada
 
 ## Testes automatizados
 
-- `site.test.ts` valida quantidades da V2, unicidade e ausência de telefone fictício
+- `site.test.ts` valida quantidades da V2, unicidade, formato brasileiro do contato e URLs com mensagens gerais e por serviço
 - `whatsapp.test.ts` valida números ausentes, inválidos e normalizados
 - `structured-data.test.ts` valida o tipo `FAQPage`, a correspondência das perguntas e o escape seguro do JSON
 
@@ -37,7 +37,7 @@ A revisão estática deve verificar semântica, títulos, controles, imagens, an
 
 - Um único H1
 - Todos os destinos internos existentes
-- Zero links para WhatsApp sem número oficial
+- Todos os CTAs comerciais com destino `wa.me`, número centralizado e mensagem preenchida; o número temporário deve estar identificado como exemplo
 - `robots.txt` acessível
 - Sete perguntas no JSON-LD
 - Conteúdo comercial presente no HTML renderizado

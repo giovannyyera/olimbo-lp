@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 
 import { siteConfig } from "./site";
+import { createWhatsAppUrl } from "../lib/whatsapp";
 
 describe("siteConfig", () => {
   it("mantém soluções e âncoras únicas", () => {
@@ -29,7 +30,20 @@ describe("siteConfig", () => {
     ).toBe(true);
   });
 
-  it("não publica um WhatsApp sem número oficial", () => {
-    expect(siteConfig.contact.whatsapp.phone).toBeNull();
+  it("gera destinos de WhatsApp com o número centralizado e as mensagens", () => {
+    const { phone, message } = siteConfig.contact.whatsapp;
+    expect(phone).toMatch(/^\+55 \(\d{2}\) 9\d{4}-\d{4}$/);
+
+    for (const text of [
+      message,
+      ...siteConfig.solutions.map(({ whatsappMessage }) => whatsappMessage),
+    ]) {
+      const href = createWhatsAppUrl(phone, text);
+      expect(href).not.toBeNull();
+      const url = new URL(href!);
+      expect(url.origin).toBe("https://wa.me");
+      expect(url.pathname).toBe(`/${phone?.replace(/\D/g, "")}`);
+      expect(url.searchParams.get("text")).toBe(text);
+    }
   });
 });
