@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "Orbe",
+  name: "Olimbo",
   description:
     "Criamos sites profissionais, sistemas personalizados e automações para transformar necessidades em soluções digitais.",
   navigation: [
@@ -50,7 +50,7 @@ export const siteConfig = {
       ],
       ctaLabel: "Conversar sobre um site",
       whatsappMessage:
-        "Olá, Orbe! Quero conversar sobre a criação de um site ou landing page.",
+        "Olá, Olimbo! Quero conversar sobre a criação de um site ou landing page.",
       layout: "wide",
     },
     {
@@ -68,7 +68,7 @@ export const siteConfig = {
       ],
       ctaLabel: "Conversar sobre um sistema",
       whatsappMessage:
-        "Olá, Orbe! Quero conversar sobre o desenvolvimento de um sistema sob medida.",
+        "Olá, Olimbo! Quero conversar sobre o desenvolvimento de um sistema sob medida.",
       layout: "standard",
     },
     {
@@ -86,7 +86,7 @@ export const siteConfig = {
       ],
       ctaLabel: "Conversar sobre automação",
       whatsappMessage:
-        "Olá, Orbe! Quero conversar sobre automações e integrações para o meu negócio.",
+        "Olá, Olimbo! Quero conversar sobre automações e integrações para o meu negócio.",
       layout: "standard",
     },
     {
@@ -104,7 +104,7 @@ export const siteConfig = {
       ],
       ctaLabel: "Conversar sobre uma ideia",
       whatsappMessage:
-        "Olá, Orbe! Tenho uma necessidade digital e quero entender qual solução faz sentido.",
+        "Olá, Olimbo! Tenho uma necessidade digital e quero entender qual solução faz sentido.",
       layout: "wide",
     },
   ],
@@ -200,7 +200,7 @@ export const siteConfig = {
     {
       question: "Quanto custa desenvolver um site profissional?",
       answer:
-        "O investimento depende do objetivo, do volume de conteúdo, das funcionalidades e do nível de personalização. A Orbe entende o escopo antes de preparar um orçamento específico para o projeto.",
+        "O investimento depende do objetivo, do volume de conteúdo, das funcionalidades e do nível de personalização. A Olimbo entende o escopo antes de preparar um orçamento específico para o projeto.",
     },
     {
       question: "Qual é a diferença entre um site e uma landing page?",
@@ -208,7 +208,7 @@ export const siteConfig = {
         "Um site costuma reunir diferentes páginas e informações sobre uma empresa. Uma landing page concentra a experiência em uma campanha, oferta ou ação principal, como solicitar contato.",
     },
     {
-      question: "A Orbe desenvolve sistemas personalizados?",
+      question: "A Olimbo desenvolve sistemas personalizados?",
       answer:
         "Sim. A proposta de um sistema sob medida é atender processos, informações e necessidades que ferramentas genéricas não resolvem de forma adequada.",
     },
@@ -238,7 +238,7 @@ export const siteConfig = {
       // Número de exemplo: substitua pelo WhatsApp oficial antes de publicar.
       phone: "+55 (11) 99999-9999" as string | null,
       message:
-        "Olá, Orbe! Quero conversar sobre uma solução digital para o meu projeto.",
+        "Olá, Olimbo! Quero conversar sobre uma solução digital para o meu projeto.",
       note: "WhatsApp configurado com número de exemplo para demonstração.",
       unavailableMessage:
         "O canal oficial de WhatsApp ainda está sendo confirmado.",

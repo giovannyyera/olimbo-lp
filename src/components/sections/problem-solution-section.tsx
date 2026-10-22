@@ -12,7 +12,7 @@ export function ProblemSolutionSection() {
           </h2>
           <p>
             Identifique uma situação próxima da sua rotina e veja um caminho
-            digital que pode ser avaliado com a Orbe.
+            digital que pode ser avaliado com a Olimbo.
           </p>
         </div>
         <div className="problem-list">

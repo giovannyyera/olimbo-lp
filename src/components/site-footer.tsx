@@ -26,7 +26,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="shell footer-bottom">
-        <span translate="no">ORBE</span>
+        <span translate="no">OLIMBO</span>
         <span>Exemplos visuais são demonstrações conceituais.</span>
         <a href="#inicio">Voltar ao topo ↑</a>
       </div>

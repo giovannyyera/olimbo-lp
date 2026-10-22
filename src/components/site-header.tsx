@@ -8,7 +8,7 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <div className="shell site-header-inner">
-        <a className="brand-link" href="#inicio" aria-label="Orbe, início">
+        <a className="brand-link" href="#inicio" aria-label="Olimbo, início">
           <BrandLogo priority />
         </a>
 

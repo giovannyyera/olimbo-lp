@@ -1,10 +1,10 @@
 .hero {
   position: relative;
   overflow: hidden;
-  border-bottom: 1px solid var(--orbe-line);
+  border-bottom: 1px solid var(--olimbo-line);
   background:
     radial-gradient(circle at 82% 18%, rgb(250 194 2 / 14%), transparent 28rem),
-    var(--orbe-ivory);
+    var(--olimbo-ivory);
 }
 
 .hero-grid {
@@ -26,11 +26,11 @@
   flex-wrap: wrap;
   gap: 0.35rem;
   margin-bottom: 1.25rem;
-  color: var(--orbe-graphite);
+  color: var(--olimbo-graphite);
 }
 
 .hero-eyebrow span {
-  color: var(--orbe-gold-deep);
+  color: var(--olimbo-gold-deep);
 }
 
 .hero h1 {
@@ -45,7 +45,7 @@
 .hero-description {
   max-width: 43rem;
   margin: 1.75rem 0 0;
-  color: var(--orbe-graphite);
+  color: var(--olimbo-graphite);
   font-size: clamp(1.05rem, 2.2vw, 1.22rem);
   line-height: 1.72;
 }
@@ -70,8 +70,8 @@
 
 .hero-capabilities span {
   padding: 0.75rem 0;
-  border-top: 1px solid var(--orbe-line);
-  color: var(--orbe-graphite);
+  border-top: 1px solid var(--olimbo-line);
+  color: var(--olimbo-graphite);
   font-size: 0.68rem;
   font-weight: 800;
   letter-spacing: 0.12em;
@@ -109,7 +109,7 @@
   overflow: hidden;
   border: 1px solid rgb(11 11 11 / 18%);
   border-radius: 0.75rem;
-  background: var(--orbe-paper);
+  background: var(--olimbo-paper);
   box-shadow: 0 1.5rem 4rem rgb(11 11 11 / 12%);
 }
 
@@ -135,7 +135,7 @@
   align-items: center;
   gap: 0.28rem;
   padding: 0 0.6rem;
-  border-bottom: 1px solid var(--orbe-line);
+  border-bottom: 1px solid var(--olimbo-line);
   background: #f0efe9;
 }
 
@@ -148,7 +148,7 @@
 
 .concept-toolbar small {
   margin-left: auto;
-  color: var(--orbe-muted);
+  color: var(--olimbo-muted);
   font-size: 0.48rem;
   font-weight: 800;
   letter-spacing: 0.1em;
@@ -167,7 +167,7 @@
   height: 0.45rem;
   margin-right: auto;
   border-radius: 99px;
-  background: var(--orbe-black);
+  background: var(--olimbo-black);
 }
 
 .concept-site-nav span {
@@ -187,23 +187,23 @@
 .concept-site-copy span {
   display: block;
   border-radius: 99px;
-  background: var(--orbe-black);
+  background: var(--olimbo-black);
 }
 
 .concept-site-copy b { width: 84%; height: 0.65rem; }
 .concept-site-copy b:nth-child(2) { width: 62%; }
 .concept-site-copy span { width: 72%; height: 0.22rem; background: rgb(11 11 11 / 22%); }
 .concept-site-copy span:nth-child(4) { width: 54%; }
-.concept-site-copy i { width: 4rem; height: 1.3rem; margin-top: 0.5rem; border-radius: 0.2rem; background: var(--orbe-gold); }
+.concept-site-copy i { width: 4rem; height: 1.3rem; margin-top: 0.5rem; border-radius: 0.2rem; background: var(--olimbo-gold); }
 
 .concept-dashboard-body { display: grid; grid-template-columns: 2.2rem 1fr; height: calc(100% - 1.75rem); }
-.concept-sidebar { border-right: 1px solid var(--orbe-line); background: var(--orbe-black); }
+.concept-sidebar { border-right: 1px solid var(--olimbo-line); background: var(--olimbo-black); }
 .concept-dashboard-content { padding: 0.75rem; }
-.concept-dashboard-content > b { display: block; width: 38%; height: 0.3rem; margin-bottom: 0.75rem; border-radius: 99px; background: var(--orbe-black); }
+.concept-dashboard-content > b { display: block; width: 38%; height: 0.3rem; margin-bottom: 0.75rem; border-radius: 99px; background: var(--olimbo-black); }
 .concept-metric-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.35rem; }
-.concept-metric-row i { height: 1.8rem; border: 1px solid var(--orbe-line); border-radius: 0.25rem; background: #f6f4ec; }
-.concept-chart { display: flex; height: 3.5rem; align-items: end; gap: 0.4rem; margin-top: 0.7rem; padding: 0.5rem; border: 1px solid var(--orbe-line); }
-.concept-chart span { flex: 1; background: var(--orbe-gold); }
+.concept-metric-row i { height: 1.8rem; border: 1px solid var(--olimbo-line); border-radius: 0.25rem; background: #f6f4ec; }
+.concept-chart { display: flex; height: 3.5rem; align-items: end; gap: 0.4rem; margin-top: 0.7rem; padding: 0.5rem; border: 1px solid var(--olimbo-line); }
+.concept-chart span { flex: 1; background: var(--olimbo-gold); }
 .concept-chart span:nth-child(1) { height: 35%; }
 .concept-chart span:nth-child(2) { height: 60%; }
 .concept-chart span:nth-child(3) { height: 48%; }
@@ -223,37 +223,37 @@
 
 .flow-node {
   padding: 0.5rem 0.6rem;
-  border: 1px solid var(--orbe-line);
+  border: 1px solid var(--olimbo-line);
   border-radius: 0.3rem;
-  background: var(--orbe-paper);
+  background: var(--olimbo-paper);
   font-size: 0.5rem;
   font-weight: 800;
   text-transform: uppercase;
 }
 
-.flow-node-gold { background: var(--orbe-gold); }
-.concept-flow i { width: 1rem; height: 1px; background: var(--orbe-black); }
-.hero-product-visual figcaption { position: absolute; bottom: -1.5rem; width: 100%; color: var(--orbe-muted); font-size: 0.68rem; text-align: center; }
+.flow-node-gold { background: var(--olimbo-gold); }
+.concept-flow i { width: 1rem; height: 1px; background: var(--olimbo-black); }
+.hero-product-visual figcaption { position: absolute; bottom: -1.5rem; width: 100%; color: var(--olimbo-muted); font-size: 0.68rem; text-align: center; }
 
-.benefits-section { background: var(--orbe-paper); }
+.benefits-section { background: var(--olimbo-paper); }
 .benefits-grid { display: grid; gap: 1rem; }
-.benefit-card { position: relative; min-height: 24rem; padding: 1.25rem; overflow: hidden; border: 1px solid var(--orbe-line); background: var(--orbe-ivory); transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease; }
-.card-index { color: var(--orbe-muted); font-size: 0.68rem; font-weight: 800; letter-spacing: 0.1em; }
+.benefit-card { position: relative; min-height: 24rem; padding: 1.25rem; overflow: hidden; border: 1px solid var(--olimbo-line); background: var(--olimbo-ivory); transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease; }
+.card-index { color: var(--olimbo-muted); font-size: 0.68rem; font-weight: 800; letter-spacing: 0.1em; }
 .benefit-card h3 { margin: 1.5rem 0 0.8rem; font-size: 1.45rem; letter-spacing: -0.035em; }
-.benefit-card > p { margin: 0; color: var(--orbe-graphite); line-height: 1.65; }
-.benefit-visual { position: relative; height: 10rem; margin-top: 1.2rem; border-bottom: 1px solid var(--orbe-line); }
-.benefit-opportunities .benefit-browser { position: absolute; inset: 1rem 10% 1rem 0; border: 1px solid var(--orbe-line); border-radius: 0.4rem; background: linear-gradient(135deg, white 55%, #f1efe8 55%); }
+.benefit-card > p { margin: 0; color: var(--olimbo-graphite); line-height: 1.65; }
+.benefit-visual { position: relative; height: 10rem; margin-top: 1.2rem; border-bottom: 1px solid var(--olimbo-line); }
+.benefit-opportunities .benefit-browser { position: absolute; inset: 1rem 10% 1rem 0; border: 1px solid var(--olimbo-line); border-radius: 0.4rem; background: linear-gradient(135deg, white 55%, #f1efe8 55%); }
 .benefit-opportunities .benefit-pointer { position: absolute; right: 18%; bottom: 1.4rem; font-size: 1.8rem; font-style: normal; }
-.benefit-opportunities b { position: absolute; right: 0; bottom: 0.8rem; padding: 0.45rem 0.65rem; background: var(--orbe-gold); font-size: 0.58rem; text-transform: uppercase; }
+.benefit-opportunities b { position: absolute; right: 0; bottom: 0.8rem; padding: 0.45rem 0.65rem; background: var(--olimbo-gold); font-size: 0.58rem; text-transform: uppercase; }
 .benefit-automation { display: flex; align-items: center; justify-content: center; gap: 0.5rem; }
-.benefit-automation span, .benefit-automation b { display: grid; width: 2.8rem; height: 2.8rem; place-items: center; border: 1px solid var(--orbe-line); border-radius: 50%; background: white; }
-.benefit-automation b { background: var(--orbe-gold); }
-.benefit-automation i { width: 1.4rem; height: 1px; background: var(--orbe-black); }
+.benefit-automation span, .benefit-automation b { display: grid; width: 2.8rem; height: 2.8rem; place-items: center; border: 1px solid var(--olimbo-line); border-radius: 50%; background: white; }
+.benefit-automation b { background: var(--olimbo-gold); }
+.benefit-automation i { width: 1.4rem; height: 1px; background: var(--olimbo-black); }
 .benefit-organization { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem; padding: 1rem; }
-.benefit-organization span { border: 1px solid var(--orbe-line); border-radius: 0.35rem; background: white; }
-.benefit-organization span:first-child { grid-row: span 2; background: var(--orbe-gold); }
-.benefit-custom span { position: absolute; border: 1px solid var(--orbe-line); border-radius: 50%; }
+.benefit-organization span { border: 1px solid var(--olimbo-line); border-radius: 0.35rem; background: white; }
+.benefit-organization span:first-child { grid-row: span 2; background: var(--olimbo-gold); }
+.benefit-custom span { position: absolute; border: 1px solid var(--olimbo-line); border-radius: 50%; }
 .benefit-custom span:nth-child(1) { inset: 0.5rem 18%; }
 .benefit-custom span:nth-child(2) { inset: 2rem 29%; }
 .benefit-custom span:nth-child(3) { inset: 3.5rem 40%; }
-.benefit-custom b { position: absolute; inset: 50% auto auto 50%; padding: 0.3rem; background: var(--orbe-ivory); font-size: 0.6rem; transform: translate(-50%, -50%); }
+.benefit-custom b { position: absolute; inset: 50% auto auto 50%; padding: 0.3rem; background: var(--olimbo-ivory); font-size: 0.6rem; transform: translate(-50%, -50%); }

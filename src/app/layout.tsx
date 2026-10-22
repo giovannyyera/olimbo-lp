@@ -16,20 +16,32 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Orbe | Criação de Sites, Sistemas e Automações",
+  icons: {
+    icon: [
+      { url: "/brand/olimbo-favicon-16.png", type: "image/png", sizes: "16x16" },
+      { url: "/brand/olimbo-favicon-32.png", type: "image/png", sizes: "32x32" },
+    ],
+    shortcut: { url: "/brand/olimbo-favicon.ico", type: "image/x-icon" },
+    apple: {
+      url: "/brand/olimbo-apple-touch-icon.png",
+      type: "image/png",
+      sizes: "180x180",
+    },
+  },
+  title: "Olimbo | Criação de Sites, Sistemas e Automações",
   description:
-    "Criação de sites profissionais, landing pages, softwares personalizados e automações. Conheça as soluções digitais da Orbe para seu projeto ou negócio.",
+    "Criação de sites profissionais, landing pages, softwares personalizados e automações. Conheça as soluções digitais da Olimbo para seu projeto ou negócio.",
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    siteName: "Orbe",
-    title: "Orbe | Criação de Sites, Sistemas e Automações",
+    siteName: "Olimbo",
+    title: "Olimbo | Criação de Sites, Sistemas e Automações",
     description:
       "Sites profissionais, sistemas personalizados e automações para transformar necessidades em soluções digitais.",
   },
   twitter: {
     card: "summary",
-    title: "Orbe | Criação de Sites, Sistemas e Automações",
+    title: "Olimbo | Criação de Sites, Sistemas e Automações",
     description:
       "Sites profissionais, sistemas personalizados e automações para projetos e negócios.",
   },

@@ -1,5 +1,5 @@
 .solutions-section {
-  background: var(--orbe-ivory);
+  background: var(--olimbo-ivory);
 }
 
 .solutions-bento {
@@ -15,8 +15,8 @@
   gap: 2rem;
   padding: 1.35rem;
   overflow: hidden;
-  border: 1px solid var(--orbe-line);
-  background: var(--orbe-paper);
+  border: 1px solid var(--olimbo-line);
+  background: var(--olimbo-paper);
   transition: border-color 180ms ease, box-shadow 180ms ease,
     transform 180ms ease;
 }
@@ -24,7 +24,7 @@
 .solution-wide {
   background:
     radial-gradient(circle at 88% 12%, rgb(250 194 2 / 18%), transparent 14rem),
-    var(--orbe-paper);
+    var(--olimbo-paper);
 }
 
 .solution-heading {
@@ -34,7 +34,7 @@
 }
 
 .solution-number {
-  color: var(--orbe-muted);
+  color: var(--olimbo-muted);
   font-size: 0.68rem;
   font-weight: 800;
   letter-spacing: 0.12em;
@@ -44,14 +44,14 @@
   position: relative;
   width: 4.5rem;
   height: 4.5rem;
-  border: 1px solid var(--orbe-line);
+  border: 1px solid var(--olimbo-line);
   border-radius: 50%;
 }
 
 .solution-orbit::before {
   position: absolute;
   inset: 27%;
-  border: 1px solid var(--orbe-line);
+  border: 1px solid var(--olimbo-line);
   border-radius: 50%;
   content: "";
 }
@@ -63,7 +63,7 @@
   width: 0.7rem;
   height: 0.7rem;
   border-radius: 50%;
-  background: var(--orbe-gold);
+  background: var(--olimbo-gold);
 }
 
 .solution-copy h3 {
@@ -78,7 +78,7 @@
 .solution-copy > p {
   max-width: 40rem;
   margin: 1rem 0 0;
-  color: var(--orbe-graphite);
+  color: var(--olimbo-graphite);
   line-height: 1.65;
 }
 
@@ -93,7 +93,7 @@
 .solution-copy li {
   position: relative;
   padding-left: 1rem;
-  color: var(--orbe-graphite);
+  color: var(--olimbo-graphite);
   font-size: 0.86rem;
   line-height: 1.45;
 }
@@ -105,7 +105,7 @@
   width: 0.3rem;
   height: 0.3rem;
   border-radius: 50%;
-  background: var(--orbe-gold-deep);
+  background: var(--olimbo-gold-deep);
   content: "";
 }
 
@@ -115,7 +115,7 @@
 
 .problem-section {
   padding-block: 5.5rem;
-  background: var(--orbe-black);
+  background: var(--olimbo-black);
   color: white;
 }
 
@@ -157,7 +157,7 @@
 }
 
 .problem-card-index {
-  color: var(--orbe-gold);
+  color: var(--olimbo-gold);
   font-size: 0.68rem;
   font-weight: 800;
   letter-spacing: 0.12em;
@@ -192,7 +192,7 @@
   height: 2.6rem;
   align-items: center;
   gap: 0.55rem;
-  color: var(--orbe-gold);
+  color: var(--olimbo-gold);
 }
 
 .problem-connector span {
@@ -210,7 +210,7 @@
   align-self: end;
   padding: 0.45rem 0.6rem;
   border: 1px solid rgb(250 194 2 / 35%);
-  color: var(--orbe-gold);
+  color: var(--olimbo-gold);
   font-size: 0.58rem;
   font-weight: 800;
   letter-spacing: 0.1em;

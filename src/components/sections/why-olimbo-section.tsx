@@ -1,6 +1,6 @@
 import { siteConfig } from "@/config/site";
 
-export function WhyOrbeSection() {
+export function WhyOlimboSection() {
   return (
     <section className="why-section section-anchor reveal" id="sobre">
       <div className="shell why-grid">
@@ -11,10 +11,10 @@ export function WhyOrbeSection() {
           <b>Contexto</b>
         </div>
         <div className="why-copy">
-          <p className="eyebrow">Por que a Orbe?</p>
+          <p className="eyebrow">Por que a Olimbo?</p>
           <h2>Seu projeto merece mais do que uma solução genérica.</h2>
           <p className="why-intro">
-            A Orbe é uma empresa de tecnologia que cria sites, sistemas e
+            A Olimbo é uma empresa de tecnologia que cria sites, sistemas e
             automações a partir da necessidade de cada projeto. A proposta
             prioriza função clara, experiência compreensível e atenção à execução.
           </p>

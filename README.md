@@ -1,6 +1,6 @@
-# Orbe: landing page
+# Olimbo: landing page
 
-Landing page comercial da Orbe para apresentar sites, sistemas, automações e consultoria digital. A V2 combina conteúdo orientado a benefícios, demonstrações conceituais e otimização para mecanismos de busca sem inventar prova social ou canais de contato.
+Landing page comercial da Olimbo para apresentar sites, sistemas, automações e consultoria digital. A V2 combina conteúdo orientado a benefícios, demonstrações conceituais e otimização para mecanismos de busca sem inventar prova social ou canais de contato.
 
 ## Executar localmente
 
@@ -19,7 +19,11 @@ Para executar lint, tipos, regras locais, testes e build:
 npm run check
 ```
 
-Nenhuma variável de ambiente é necessária. O WhatsApp permanece desabilitado até a Orbe fornecer um número oficial; o projeto não usa um contato fictício.
+Nenhuma variável de ambiente é necessária. O WhatsApp usa temporariamente um número de exemplo, identificado na interface e centralizado em `src/config/site.ts`; substitua-o pelo contato oficial antes de publicar.
+
+## Identidade
+
+Olimbo é a única marca do projeto. Nome do pacote, conteúdo, metadados, mensagens de contato, componentes e tokens CSS seguem essa identidade. Logos e ícones ficam em `public/brand/` e `src/app/`; as imagens dos serviços ficam em `public/images/`, com nomes iniciados por `olimbo-`. Origem e uso dos ativos estão em [Criativos](docs/creatives.md).
 
 ## Documentação
 
@@ -33,7 +37,7 @@ Nenhuma variável de ambiente é necessária. O WhatsApp permanece desabilitado 
 
 ## Escopo atual
 
-A rota principal inclui hero comercial, benefícios, serviços, problemas e possíveis caminhos, exemplos ilustrativos, processo, princípios da Orbe, perguntas frequentes e chamada final. O conteúdo é renderizado no servidor e apenas o menu móvel exige JavaScript no cliente.
+A rota principal inclui hero comercial, benefícios, serviços, problemas e possíveis caminhos, exemplos ilustrativos, processo, princípios da Olimbo, perguntas frequentes e chamada final. O conteúdo principal é renderizado no servidor; menu móvel, seleção da galeria e revelações por scroll usam componentes cliente.
 
 ## Pendências de publicação
 

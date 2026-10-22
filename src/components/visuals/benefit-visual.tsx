@@ -41,7 +41,7 @@ export function BenefitVisual({ variant }: BenefitVisualProps) {
       <span />
       <span />
       <span />
-      <b>ORBE</b>
+      <b>OLIMBO</b>
     </div>
   );
 }

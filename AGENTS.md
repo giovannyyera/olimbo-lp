@@ -1,4 +1,4 @@
-# Orbe LP
+# Olimbo LP
 
 ## Produto e stack
 
@@ -32,7 +32,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 - Leia `PRODUCT.md` e a documentação responsável antes de editar.
 - Faça a menor alteração completa que atenda ao pedido; não crie recursos, integrações ou dependências preventivas.
-- Preserve alterações locais, Git, acessibilidade, segurança e a identidade da Orbe.
+- Preserve alterações locais, Git, acessibilidade, segurança e a identidade da Olimbo.
 - Não invente depoimentos, clientes, cases, métricas, canais de contato ou informações comerciais.
 - A logo oficial deve ser preservada quando fornecida; não infira nem redesenhe seu símbolo.
 - Use Server Components por padrão e mantenha componentes cliente pequenos e justificados.

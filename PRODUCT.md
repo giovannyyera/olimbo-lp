@@ -1,10 +1,10 @@
-# Orbe: landing page comercial
+# Olimbo: landing page comercial
 
-A landing page apresenta a Orbe, explica como suas soluções digitais ajudam diferentes projetos e conduz o visitante a uma conversa comercial.
+A landing page apresenta a Olimbo, explica como suas soluções digitais ajudam diferentes projetos e conduz o visitante a uma conversa comercial.
 
 ## Objetivo comercial
 
-A página deve responder o que a Orbe desenvolve, quais problemas pode ajudar a resolver e como iniciar um projeto. A comunicação prioriza benefícios compreensíveis sem prometer resultados, prazos ou condições comerciais não confirmadas.
+A página deve responder o que a Olimbo desenvolve, quais problemas pode ajudar a resolver e como iniciar um projeto. A comunicação prioriza benefícios compreensíveis sem prometer resultados, prazos ou condições comerciais não confirmadas.
 
 ## Público
 
@@ -21,7 +21,7 @@ Não há contas, papéis de usuário ou áreas autenticadas.
 2. Reconhece benefícios e situações próximas da sua rotina
 3. Avalia sites, sistemas, automações e consultoria
 4. Visualiza exemplos conceituais de aplicação
-5. Conhece o processo proposto e os princípios da Orbe
+5. Conhece o processo proposto e os princípios da Olimbo
 6. Consulta respostas sobre orçamento e tipos de projeto
 7. Inicia contato por um canal oficial aprovado
 
@@ -31,9 +31,9 @@ Não há contas, papéis de usuário ou áreas autenticadas.
 - Benefícios com quatro ilustrações próprias
 - Bento grid de serviços com mensagens contextuais de contato
 - Comparação entre cinco problemas e possíveis caminhos digitais
-- Três demonstrações conceituais com imagens próprias identificadas como ilustrativas
+- Três demonstrações conceituais com cenas fotográficas próprias de uso dos serviços, identificadas como ilustrativas e geradas por IA
 - Processo proposto em quatro etapas
-- Princípios da Orbe sem prova social inventada
+- Princípios da Olimbo sem prova social inventada
 - Sete perguntas frequentes
 - Chamada final e rodapé institucional
 - Menu móvel acessível e navegação por âncoras
@@ -88,6 +88,7 @@ A interface usa composição editorial, fundos claros, contraste alto e detalhes
 
 ## Critérios de aceitação
 
+- Olimbo é a única marca em textos, metadados, mensagens de contato, documentação e ativos; arquivos da identidade anterior não integram o projeto atual
 - A proposta, os benefícios e o próximo passo ficam claros no início da página
 - Todas as seções solicitadas permanecem rastreáveis no HTML
 - A navegação funciona por teclado e mantém foco visível

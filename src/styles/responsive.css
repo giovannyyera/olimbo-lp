@@ -14,7 +14,7 @@
   .mobile-menu nav a:hover,
   .footer-grid a:hover,
   .footer-bottom a:hover {
-    color: var(--orbe-gold-deep);
+    color: var(--olimbo-gold-deep);
   }
 
   .button:not(.button-disabled):hover {
@@ -26,14 +26,14 @@
   }
 
   .button-outline:not(.button-disabled):hover {
-    border-color: var(--orbe-black);
-    background: var(--orbe-black);
+    border-color: var(--olimbo-black);
+    background: var(--olimbo-black);
     color: white;
   }
 
   .text-link:hover {
-    border-color: var(--orbe-gold-deep);
-    color: var(--orbe-gold-deep);
+    border-color: var(--olimbo-gold-deep);
+    color: var(--olimbo-gold-deep);
   }
 
   .benefit-card:hover,
@@ -61,8 +61,8 @@
   }
 
   .faq-list summary:hover .faq-icon {
-    border-color: var(--orbe-gold-deep);
-    background: var(--orbe-gold);
+    border-color: var(--olimbo-gold-deep);
+    background: var(--olimbo-gold);
   }
 }
 
@@ -95,7 +95,7 @@
 
   .hero-capabilities span {
     padding: 1rem;
-    border-right: 1px solid var(--orbe-line);
+    border-right: 1px solid var(--olimbo-line);
   }
 
   .hero-capabilities span:first-child { padding-left: 0; }
@@ -133,7 +133,7 @@
   }
 
   .desktop-nav a {
-    color: var(--orbe-graphite);
+    color: var(--olimbo-graphite);
     font-size: 0.75rem;
     font-weight: 700;
     transition: color 180ms ease;

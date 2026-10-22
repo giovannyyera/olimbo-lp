@@ -1,22 +1,22 @@
 @import "tailwindcss";
 
 :root {
-  --orbe-black: #0b0b0b;
-  --orbe-gold: #fac202;
-  --orbe-gold-deep: #d9a700;
-  --orbe-ivory: #f7f6f2;
-  --orbe-paper: #fffefa;
-  --orbe-graphite: #414141;
-  --orbe-muted: #727272;
-  --orbe-line: rgb(11 11 11 / 14%);
+  --olimbo-black: #0b0b0b;
+  --olimbo-gold: #fac202;
+  --olimbo-gold-deep: #d9a700;
+  --olimbo-ivory: #f7f6f2;
+  --olimbo-paper: #fffefa;
+  --olimbo-graphite: #414141;
+  --olimbo-muted: #727272;
+  --olimbo-line: rgb(11 11 11 / 14%);
   --header-height: 4.75rem;
 }
 
 @theme inline {
-  --color-orbe-black: var(--orbe-black);
-  --color-orbe-gold: var(--orbe-gold);
-  --color-orbe-ivory: var(--orbe-ivory);
-  --color-orbe-graphite: var(--orbe-graphite);
+  --color-olimbo-black: var(--olimbo-black);
+  --color-olimbo-gold: var(--olimbo-gold);
+  --color-olimbo-ivory: var(--olimbo-ivory);
+  --color-olimbo-graphite: var(--olimbo-graphite);
   --font-sans: var(--font-manrope);
 }
 
@@ -27,15 +27,15 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--header-height) + 1rem);
-  background: var(--orbe-ivory);
-  color: var(--orbe-black);
+  background: var(--olimbo-ivory);
+  color: var(--olimbo-black);
 }
 
 body {
   min-height: 100svh;
   margin: 0;
   overflow-x: clip;
-  background: var(--orbe-ivory);
+  background: var(--olimbo-ivory);
   font-family: var(--font-manrope), Arial, Helvetica, sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -75,12 +75,12 @@ p {
 }
 
 ::selection {
-  background: var(--orbe-gold);
-  color: var(--orbe-black);
+  background: var(--olimbo-gold);
+  color: var(--olimbo-black);
 }
 
 :focus-visible {
-  outline: 3px solid var(--orbe-gold);
+  outline: 3px solid var(--olimbo-gold);
   outline-offset: 4px;
 }
 
@@ -99,7 +99,7 @@ p {
 
 .eyebrow {
   margin: 0;
-  color: var(--orbe-graphite);
+  color: var(--olimbo-graphite);
   font-size: 0.7rem;
   font-weight: 800;
   letter-spacing: 0.16em;
@@ -107,7 +107,7 @@ p {
 }
 
 .eyebrow-dark {
-  color: var(--orbe-gold);
+  color: var(--olimbo-gold);
 }
 
 .section-heading {
@@ -128,7 +128,7 @@ p {
 .section-description {
   max-width: 44rem;
   margin: 1.4rem 0 0;
-  color: var(--orbe-graphite);
+  color: var(--olimbo-graphite);
   font-size: clamp(1rem, 2vw, 1.12rem);
   line-height: 1.75;
 }
@@ -145,7 +145,7 @@ p {
 .contact-note,
 .contact-status {
   margin: 0;
-  color: var(--orbe-muted);
+  color: var(--olimbo-muted);
   font-size: 0.75rem;
   line-height: 1.5;
 }

@@ -36,7 +36,7 @@ src/
 └── styles/                 # CSS dividido por responsabilidade
 ```
 
-Os ativos oficiais permanecem em `public/brand/` e `public/docs/`.
+As logos transparentes da Olimbo ficam em `public/brand/`. Os arquivos públicos da identidade anterior foram removidos.
 
 ## Fronteiras de renderização
 
@@ -62,7 +62,7 @@ As fronteiras cliente são `MobileMenu`, `HeroProductVisual` e `ScrollMotion`. O
 
 Não foram adicionadas dependências ao projeto. Logos e criativos usam `next/image`, dimensões reservadas e `sizes` responsivos. A primeira imagem do hero usa carregamento prioritário; as demais usam lazy loading. Microilustrações continuam em HTML e CSS. `src/config/creatives.ts` centraliza os três ativos WebP. Origem e prompts ficam em `docs/creatives.md`.
 
-`src/app/favicon.ico`, `icon.png` e `apple-icon.png` usam as convenções de metadados do Next.js e derivam do símbolo oficial preservado.
+Os ícones derivam do símbolo transparente da Olimbo. `layout.tsx` fornece PNGs de 16 e 32 px, ICO e ícone Apple de 180 px com URLs próprias em `public/brand/olimbo-*`. O ícone Apple também recebeu endereço novo, evitando manter a referência da identidade anterior. `public/favicon.ico` atende o fallback padrão sem adicionar links automáticos. `next.config.ts` aplica `Cache-Control: no-store, max-age=0` apenas aos ícones atuais e ao fallback. Isso controla as respostas HTTP; não garante a invalidação do banco interno de favicons de um navegador já aberto.
 
 O projeto não possui busca remota, banco, autenticação, Route Handlers, Server Actions, formulário ou analytics. O código evita enviar as seções estáticas ao cliente.
 

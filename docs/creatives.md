@@ -2,19 +2,35 @@
 
 ## Origem e uso
 
-Gerados em 21/10/2026 com a ferramenta integrada `image_gen`, revisados visualmente e convertidos para WebP (1536 × 1024, qualidade 83). São ilustrações conceituais; não representam clientes, produtos entregues nem resultados reais.
+Substituídos em 22/10/2026 com a ferramenta integrada `image_gen`, por solicitação de imagens mais realistas e orientadas ao uso dos serviços. As novas cenas têm linguagem fotográfica, luz natural, pessoas e equipamentos em ambientes de pequenos negócios. São cenas fictícias geradas por IA; não representam clientes, produtos entregues nem resultados reais. Conversão WebP em 1536 × 1024, qualidade 84.
 
-- `public/images/orbe-websites.webp`: composição de interfaces no hero e exemplo de site.
-- `public/images/orbe-software.webp`: painel modular no hero e exemplo de sistema.
-- `public/images/orbe-automation.webp`: conexões entre módulos no hero e exemplo de automação.
+- `public/images/olimbo-websites.webp`: profissional consulta um site de interiores em seu estúdio; hero e aplicação de sites.
+- `public/images/olimbo-software.webp`: gestor usa um sistema para organizar a operação; hero e aplicação de sistemas.
+- `public/images/olimbo-automation.webp`: empreendedora prepara pedidos junto ao notebook e impressora de etiquetas; hero e aplicação de automação.
+
+Prompts completos atuais: [image-prompts-2026-10-22.md](image-prompts-2026-10-22.md). Os criativos anteriores foram removidos da pasta pública. As microilustrações de benefícios continuam em HTML/CSS.
 
 Os textos alternativos e a ordem da galeria ficam em `src/config/creatives.ts`. A galeria muda apenas por ação do visitante, com transição de opacidade e escala. Os botões funcionam por teclado e anunciam a seleção; não há rotação automática.
 
 ## Marca oficial
 
-Nenhuma logo foi gerada por IA ou redesenhada. `orbe-wordmark.png` é um recorte de `orbe-logo1.png` que remove margens vazias sem alterar o conteúdo. `orbe-symbol.png` recorta o símbolo de `orbe-logo2.png`, centraliza-o sobre preto e preserva suas proporções. Esse mesmo símbolo origina `src/app/favicon.ico` (16, 32 e 48 px), `src/app/icon.png` (192 px) e `src/app/apple-icon.png` (180 px). Os arquivos oficiais originais permanecem preservados.
+Olimbo é a única marca da aplicação. `image_gen` integrado removeu o fundo da referência horizontal fornecida pelo usuário em 22/10/2026. A saída transparente foi revisada sobre marfim; o canal alpha foi preservado nas derivações feitas com Sharp:
 
-## Prompts finais
+- `public/brand/olimbo-logo-horizontal.png` (716 × 240): cabeçalho e rodapé.
+- `public/brand/olimbo-logo-symbol.png` (384 × 384): hero e fonte dos ícones.
+- `public/brand/olimbo-logo-vertical.png` (480 × 560): versão vertical transparente, derivada da mesma horizontal.
+- `public/brand/favicon-olimbo-transparente.png` (64 × 64): única URL de favicon nos metadados para evitar reutilização da URL anterior.
+- `public/favicon.ico` (16/32/48), `src/app/icon.png` (192) e `src/app/apple-icon.png` (180): símbolo com transparência real.
+
+As referências originais com fundo foram preservadas fora da pasta pública em `~/.codex/generated_images/olimbo-reference-originals/`. Ativos e guia da identidade anterior foram removidos do projeto.
+
+Prompt final da ferramenta integrada:
+
+```text
+Use case: background-extraction. Edit target: supplied horizontal Olimbo logo. Remove ALL ivory/off-white paper background and texture, including inside every enclosed letter counter and ALL spaces between the network nodes and connecting lines. Output an actual transparent PNG with alpha, not a checkerboard illustration. Preserve the exact official logo: the black and golden yellow connected circular nodes symbol on the LEFT and the exact word 'Olimbo' on the RIGHT. Keep geometry, relative placement, typography, spelling, proportions, circle counts and connections exactly as input. Crisp clean flat edges, no shadow, no glow, no background or panel. Wide horizontal logo, fully within canvas with small transparent margins. This is precise background removal, no redesign. Black letters remain black, golden nodes remain golden yellow.
+```
+
+## Prompts anteriores — histórico de 21/10/2026
 
 ### Interfaces
 
@@ -37,3 +53,8 @@ Use case: stylized-concept. Asset type: conceptual automation creative for a pre
 ## Condição de revisão
 
 Rever este registro se imagens, origem, marca ou controles da galeria forem alterados.
+
+
+## Compatibilidade dos ícones — 22/10/2026
+
+`olimbo-favicon-16.png`, `olimbo-favicon-32.png` e `olimbo-favicon.ico` são derivações do mesmo símbolo transparente. `olimbo-apple-touch-icon.png` copia a versão Apple de 180 px para um endereço próprio da marca atual. Todos ficam em `public/brand/` e são vinculados pelos metadados; as imagens de referência e a identidade permanecem as mesmas.

@@ -6,7 +6,7 @@ import { HeroSection } from "@/components/sections/hero-section";
 import { ProblemSolutionSection } from "@/components/sections/problem-solution-section";
 import { ProcessSection } from "@/components/sections/process-section";
 import { SolutionsSection } from "@/components/sections/solutions-section";
-import { WhyOrbeSection } from "@/components/sections/why-orbe-section";
+import { WhyOlimboSection } from "@/components/sections/why-olimbo-section";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { StructuredData } from "@/components/structured-data";
@@ -27,7 +27,7 @@ export default function Home() {
         <ProblemSolutionSection />
         <ApplicationsSection />
         <ProcessSection />
-        <WhyOrbeSection />
+        <WhyOlimboSection />
         <FaqSection />
         <FinalCtaSection />
       </main>

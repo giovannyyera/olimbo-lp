@@ -4,7 +4,7 @@ A V2 combina minimalismo premium, hierarquia editorial e demonstrações visuais
 
 ## Direção visual
 
-A referência oficial é `public/docs/Guia_de_Identidade_Visual_Orbe.pdf`. A interface usa um recorte sem margens de `public/brand/orbe-logo1.png` em fundos claros, sem alterar proporção, cor ou conteúdo. O símbolo de `orbe-logo2.png` aparece no hero e nos favicons, sobre preto. Os originais permanecem preservados.
+A marca é Olimbo. As versões horizontal, vertical e símbolo estão em `public/brand/olimbo-logo-{horizontal,vertical,symbol}.png`, todas com canal alpha transparente. Cabeçalho e rodapé usam a horizontal; o hero e os ícones usam o símbolo. O fundo real de cada seção permanece visível através da logo, sem retângulos marfim. A remoção do fundo usa a referência fornecida pelo usuário, sem propor uma nova identidade. Paleta e tipografia da interface são mantidas.
 
 Os grafismos usam órbitas finas, eixos, conexões e interfaces abstratas. Eles representam ideias de tecnologia sem copiar o símbolo oficial nem simular produtos existentes.
 
@@ -12,8 +12,8 @@ Os grafismos usam órbitas finas, eixos, conexões e interfaces abstratas. Eles 
 
 | Token | Valor | Uso principal |
 |---|---:|---|
-| Preto Orbe | `#0B0B0B` | Texto e seções de alto contraste |
-| Dourado Orbe | `#FAC202` | Chamadas para ação e detalhes |
+| Preto Olimbo | `#0B0B0B` | Texto e seções de alto contraste |
+| Dourado Olimbo | `#FAC202` | Chamadas para ação e detalhes |
 | Marfim | `#F7F6F2` | Fundo principal |
 | Grafite | `#414141` | Texto secundário |
 | Manrope | Fonte variável | Títulos e texto |
@@ -23,13 +23,13 @@ Os tokens globais ficam em `src/app/globals.css`. Os estilos são divididos em `
 ## Estrutura visual
 
 1. Header fixo com logo, navegação e contato
-2. Hero com galeria de criativos 3D de interfaces, painel e conexões
+2. Hero com galeria de cenas fotográficas ilustrativas de sites, sistemas e automações em uso
 3. Benefícios com quatro microilustrações
 4. Serviços em bento grid
 5. Problemas e possíveis caminhos em cartões comparativos
-6. Exemplos conceituais de site, painel e automação com imagens WebP próprias
+6. Exemplos conceituais com cenas de uso em WebP, identificadas como geradas por IA
 7. Timeline do processo proposto
-8. Princípios da Orbe em seção dourada
+8. Princípios da Olimbo em seção dourada
 9. Perguntas frequentes
 10. Chamada final escura e rodapé
 

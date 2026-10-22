@@ -30,7 +30,7 @@ export function HeroProductVisual() {
           </div>
         ))}
         <div className="showcase-brand" aria-hidden="true">
-          <Image src="/brand/orbe-symbol.png" alt="" width={36} height={36} />
+          <Image src="/brand/olimbo-logo-symbol.png" alt="" width={36} height={36} />
           <span>Ideias em movimento.</span>
         </div>
         <span className="showcase-counter" aria-hidden="true">0{selected + 1} / 03</span>
@@ -50,7 +50,7 @@ export function HeroProductVisual() {
       </div>
       <figcaption aria-live="polite" aria-atomic="true">
         <strong>{creatives[selected].title}</strong>
-        <span>Ilustração conceitual · Explore as possibilidades</span>
+        <span>Cena ilustrativa gerada por IA · Explore as possibilidades</span>
       </figcaption>
     </figure>
   );

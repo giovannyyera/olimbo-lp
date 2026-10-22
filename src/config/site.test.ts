@@ -25,7 +25,7 @@ describe("siteConfig", () => {
     expect(siteConfig.faq).toHaveLength(7);
     expect(
       siteConfig.solutions.every(({ whatsappMessage }) =>
-        whatsappMessage.startsWith("Olá, Orbe!"),
+        whatsappMessage.startsWith("Olá, Olimbo!"),
       ),
     ).toBe(true);
   });

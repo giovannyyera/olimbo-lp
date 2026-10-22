@@ -11,7 +11,7 @@ export function ApplicationsSection() {
         <SectionHeading
           eyebrow="Possibilidades"
           title="Imagine o que podemos construir para você."
-          description="As interfaces abaixo são demonstrações conceituais. Elas ilustram possibilidades e não representam clientes, produtos ou resultados reais."
+          description="Veja como sites, sistemas e automações podem fazer parte da rotina de um negócio. As cenas são ilustrativas, geradas por IA, e não representam clientes ou projetos entregues."
         />
         <div className="applications-grid">
           {siteConfig.applications.map((application) => (
@@ -30,7 +30,7 @@ export function ApplicationsSection() {
           <ContactCta
             contact={siteConfig.contact.whatsapp}
             label="Conversar sobre uma possibilidade"
-            message="Olá, Orbe! Tenho uma ideia de solução digital e quero conversar sobre as possibilidades."
+            message="Olá, Olimbo! Tenho uma ideia de solução digital e quero conversar sobre as possibilidades."
             variant="dark"
           />
         </div>

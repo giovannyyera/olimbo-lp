@@ -5,7 +5,7 @@
   left: 0.75rem;
   padding: 0.75rem 1rem;
   border-radius: 0.35rem;
-  background: var(--orbe-black);
+  background: var(--olimbo-black);
   color: white;
   transform: translateY(-160%);
   transition: transform 160ms ease;
@@ -55,7 +55,7 @@
   gap: 0.7rem;
   padding: 0.55rem 0;
   background: transparent;
-  color: var(--orbe-black);
+  color: var(--olimbo-black);
   font-size: 0.76rem;
   font-weight: 800;
   letter-spacing: 0.08em;
@@ -91,9 +91,9 @@
   right: 0;
   width: min(22rem, calc(100vw - 2rem));
   padding: 1rem;
-  border: 1px solid var(--orbe-line);
+  border: 1px solid var(--olimbo-line);
   border-radius: 0.85rem;
-  background: var(--orbe-paper);
+  background: var(--olimbo-paper);
   box-shadow: 0 1.5rem 4rem rgb(11 11 11 / 15%);
   overscroll-behavior: contain;
 }
@@ -108,7 +108,7 @@
   min-height: 3.35rem;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid var(--orbe-line);
+  border-bottom: 1px solid var(--olimbo-line);
   font-size: 1rem;
   font-weight: 650;
 }
@@ -130,19 +130,19 @@
 }
 
 .button-gold {
-  background: var(--orbe-gold);
-  color: var(--orbe-black);
+  background: var(--olimbo-gold);
+  color: var(--olimbo-black);
 }
 
 .button-dark {
-  background: var(--orbe-black);
+  background: var(--olimbo-black);
   color: white;
 }
 
 .button-outline {
-  border-color: var(--orbe-line);
+  border-color: var(--olimbo-line);
   background: transparent;
-  color: var(--orbe-black);
+  color: var(--olimbo-black);
 }
 
 .button-disabled {

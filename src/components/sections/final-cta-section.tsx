@@ -24,7 +24,7 @@ export function FinalCtaSection() {
           </p>
           <ContactCta
             contact={siteConfig.contact.whatsapp}
-            label="Conversar com a Orbe"
+            label="Conversar com a Olimbo"
             className="final-cta-button"
           />
           <p className="contact-status">
