@@ -1,6 +1,6 @@
 import { siteConfig } from "@/config/site";
 
-import { BrandLogo } from "./brand-logo";
+import { BrandLogo } from "@/components/brand-logo";
 
 export function SiteFooter() {
   return (
@@ -27,7 +27,7 @@ export function SiteFooter() {
       </div>
       <div className="shell footer-bottom">
         <span translate="no">OLIMBO</span>
-        <span>Exemplos visuais são demonstrações conceituais.</span>
+        <span>Da primeira ideia ao próximo passo.</span>
         <a href="#inicio">Voltar ao topo ↑</a>
       </div>
     </footer>

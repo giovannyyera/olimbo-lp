@@ -1,6 +1,6 @@
 import { siteConfig } from "@/config/site";
 
-import { SectionHeading } from "../section-heading";
+import { SectionHeading } from "@/components/section-heading";
 
 export function FaqSection() {
   return (
@@ -8,8 +8,8 @@ export function FaqSection() {
       <div className="shell faq-grid">
         <SectionHeading
           eyebrow="Perguntas frequentes"
-          title="Respostas para começar com mais clareza."
-          description="O escopo de cada projeto é definido a partir do contexto. Estas respostas explicam o ponto de partida."
+          title="Tire suas dúvidas. Dê o primeiro passo."
+          description="Você não precisa chegar com todas as respostas. Veja como começar a conversa sobre o seu projeto."
         />
         <div className="faq-list">
           {siteConfig.faq.map((item, index) => (

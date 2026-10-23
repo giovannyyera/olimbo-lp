@@ -1,6 +1,6 @@
 import { siteConfig } from "@/config/site";
 
-import { SectionHeading } from "../section-heading";
+import { SectionHeading } from "@/components/section-heading";
 
 export function ProcessSection() {
   return (
@@ -8,8 +8,8 @@ export function ProcessSection() {
       <div className="shell">
         <SectionHeading
           eyebrow="Como trabalhamos"
-          title="Da primeira conversa à solução digital."
-          description="Este é o processo proposto para entender o desafio, definir o caminho e preparar uma solução coerente com o projeto."
+          title="Você traz o desafio. Construímos o caminho."
+          description="Uma sequência clara para sair da ideia, definir prioridades e chegar a uma solução pronta para ser usada."
         />
         <ol className="process-timeline">
           {siteConfig.process.map((step) => (

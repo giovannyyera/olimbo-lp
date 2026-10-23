@@ -1,184 +1,87 @@
-# Setup e evidências
+# Decisões e evidências do projeto
 
-## Contexto do bootstrap
+Este documento mantém as decisões atuais da LP da Olimbo, suas fontes e as condições de revisão. Os resultados detalhados ficam na [auditoria de 23/10/2026](audit-2026-10-23.md).
 
-- Data de verificação: 20/10/2026, fuso America/Sao_Paulo.
-- Toolkit: Vibe Coding Toolkit, Prompt 11, revisão `790a895304e0c08b70a5b215c9d334f1c86b816c`.
-- Ambiente observado: Windows, Node.js 24.22.0, npm 11.19.1 e Git 2.52.0.windows.1.
-- Repositório existente preservado: branch `main`, remote `origin` e commit inicial `f269e88`.
-- Nenhum commit, push, deploy, serviço pago ou configuração global foi realizado.
+## Fontes canônicas
 
-O scaffold oficial foi criado temporariamente com `create-next-app` 16.4.2 e incorporado à raiz, preservando Git, README e `.gitignore`. O Next.js adicionou ao `AGENTS.md` seu bloco gerenciado de orientação para agentes.
+- [Produto](../PRODUCT.md): escopo e restrições comerciais
+- [Arquitetura](architecture.md): estrutura, conteúdo e fronteiras cliente
+- [Design](design.md): identidade, responsividade, movimento e acessibilidade
+- [Qualidade](quality.md): comandos e critérios de verificação
+- [Criativos](creatives.md): origem e uso dos ativos
+- Guias do Next.js instalado em `node_modules/next/dist/docs/`
 
-## Fontes e ativos
+## Stack e bootstrap
 
-- Documentação versionada do Next.js em `node_modules/next/dist/docs/`.
-- Marca atual: Olimbo. Logos transparentes em `public/brand/olimbo-logo-{horizontal,vertical,symbol}.png`; detalhes em `docs/creatives.md`.
-- Diretrizes atuais do `web-design-guidelines` consultadas na fonte oficial da skill.
+O bootstrap de 20/10/2026 incorporou o scaffold oficial de `create-next-app` 16.4.2 ao repositório existente. Git, README, npm e `.gitignore` foram preservados. O Next.js mantém seu bloco gerenciado em `AGENTS.md`.
 
-O guia da identidade anterior foi removido em 22/10/2026 por solicitação do usuário.
+A stack atual é Next.js 16.4.2, React 19.3.0, TypeScript estrito, Tailwind CSS 4, ESLint 10 e Vitest 4. `package-lock.json` fixa a instalação; `package.json` declara Node.js 20.19 ou superior e npm 11. A auditoria atual usou Node.js 24.14.0 e npm 11.9.0 no macOS.
 
-## Adaptações para uma landing page institucional
+Não há banco, autenticação, pagamentos, variáveis de ambiente, logger, analytics ou envio de formulário. Essas integrações dependem de necessidade aprovada. O build pode precisar de rede para baixar a fonte Manrope com `next/font`; os arquivos são servidos localmente ao navegador.
 
-- npm foi preservado; nenhuma troca de gerenciador foi necessária.
-- Banco, Drizzle, PostgreSQL, autenticação e migrations foram omitidos porque não há persistência.
-- Zod, logger, biblioteca de classes, biblioteca de UI, ícones e animação foram omitidos por não sustentarem um fluxo atual.
-- Não existe `.env.example`: o projeto não usa variáveis de ambiente.
-- React Compiler e Cache Components permaneceram desativados sem evidência de necessidade.
-- O WhatsApp oficial ainda não foi fornecido. Em 21/10/2026, por solicitação explícita do usuário, os CTAs foram habilitados com um número brasileiro de exemplo centralizado em `src/config/site.ts`. A interface identifica a demonstração. Revisar e substituir o número antes de publicar.
-- Formulário, e-mail, gestão de relacionamento com clientes, analytics, gestão de conteúdo, chat e metadados dependentes de domínio foram adiados.
+Condição de revisão: mudanças de dependências, comandos ou escopo exigem atualizar os documentos responsáveis e executar os checks.
 
-## Skills locais
+## Marca e ativos
 
-As skills foram instaladas com cópia versionada em `.agents/skills/`, e `skills-lock.json` registra origem e hash. Para esta implementação foram lidas e aplicadas:
+Em 22/10/2026, o usuário definiu Olimbo como única marca. Em 23/10/2026, forneceu 18 PNGs com a identidade “O” e cursor. Os arquivos de origem foram trazidos para o worktree local.
 
-- `vercel-react-best-practices`: Server Components por padrão, cliente pequeno e imagens dimensionadas.
-- `vercel-composition-patterns`: composição de chamadas para ação, cabeçalho e títulos sem contratos de componente excessivos.
-- `web-design-guidelines`: revisão de semântica, foco, controles, imagens, movimento e responsividade.
-- `writing-guidelines`: revisão editorial da documentação e remoção de abreviações ambíguas.
-- `next-dev-loop`: procedimento de runtime consultado; execução específica bloqueada se `agent-browser` continuar ausente.
+Por solicitação posterior, a ferramenta integrada `image_gen` removeu o fundo de cada variante. As 18 versões transparentes ficam em `olimbo_logos_png/`, pasta local excluída do Git; a página usa somente derivações em `public/brand/` e `public/favicon.ico`. Metadados apontam para um favicon PNG de nome novo e um ícone Apple versionado. Não há ícones automáticos em `src/app/` concorrendo com essas referências.
 
-Também permanecem disponíveis para demandas específicas `next-bundle-optimizer`, `vercel-react-view-transitions`, `find-skills` e skills relacionadas à Vercel. Instalação não autoriza deploy, acesso a conta ou uso de token; nenhuma delas foi usada para publicar.
+A única fotografia atual é a composição decorativa de `#sobre`, criada em 22/10/2026. Fontes, dimensões e prompts ficam em [Criativos](creatives.md). A auditoria removeu as fotografias antigas de serviços, os prompts sem ativo correspondente e os estilos de elementos removidos. As 18 logos permanecem como fontes oficiais.
 
-## Implementação entregue
+Condição de revisão: novas logos ou imagens exigem inspeção visual, transparência, recorte, proporções, metadados e nomes de arquivos. Os ativos públicos necessários devem permanecer em `public/`; as fontes locais podem ser ignoradas pelo Git. Verificar o recurso servido não comprova o favicon exibido em uma aba pessoal já aberta.
 
-- V2 comercial com hero, benefícios, bento grid de soluções, comparação de problemas, exemplos conceituais, processo, princípios, perguntas frequentes e chamada final.
-- Ilustrações próprias em HTML e CSS para sites, painéis e fluxos, todas identificadas como conceituais.
-- Mensagens contextuais de WhatsApp por serviço e mensagem geral, com CTAs habilitados para o número temporário de exemplo.
-- Metadados comerciais, `robots.txt` e JSON-LD `FAQPage` sem canonical, sitemap ou URLs fictícias.
-- Server Components em toda a página e menu móvel como única fronteira cliente.
-- CSS dividido por responsabilidade, sem dependência visual ou de animação.
-- Documentação de produto, arquitetura, design, qualidade e operação atualizada.
+## Contato comercial
 
-## Verificações
+Em 23/10/2026, o usuário forneceu +55 (18) 99671-6753 como destino de todos os CTAs comerciais. O número fica centralizado em `src/config/site.ts`; as mensagens gerais e por serviço usam a mesma configuração. A mensagem de proposta fica em `src/config/project-offer.ts`.
 
-| Item | Estado | Evidência |
-|---|---|---|
-| Lint | Validado durante a implementação | `npm run lint`, exit 0 |
-| Tipos | Validado durante a implementação | `npm run typecheck`, exit 0 |
-| Testes | **Validado durante a implementação** | Vitest: 3 arquivos e 7 testes aprovados |
-| Check completo | **Validado** | `npm run check`, exit 0: lint, tipos, lint tipado, regras, 3 arquivos/7 testes e build estático |
-| Runtime local | **Validado** | `GET /` e `/robots.txt` retornaram 200 em `localhost:3000`; conteúdo, âncoras, CTAs e JSON-LD foram conferidos |
-| Revisão estática de interface | **Validado** | Um H1, oito H2, destinos internos válidos, movimento reduzido e padrões proibidos revistos |
-| Revisão visual | **Não executada** | O navegador integrado retornou `apps: []` e `browsers: []`; 390, 768 e 1440 pixels não foram alegados como testados |
-| `next-dev-loop` | Pendente da ferramenta | `agent-browser` não foi encontrado no PATH no preflight inicial |
+Os avisos de contato demonstrativo foram removidos. A validação confirma formato, número e mensagem na URL; não envia mensagens nem comprova a existência ou disponibilidade da conta externa.
 
-O servidor da própria Olimbo já estava ativo em `localhost:3000` durante a evolução V2 e foi preservado.
+Condição de revisão: mudar o número, o canal ou as mensagens exige conferir todos os CTAs, inclusive no menu móvel.
 
-## Ocorrências corrigidas na V2
+## Conteúdo e interações
 
-- O primeiro teste de dados estruturados usava o alias `@/*`, que o Vitest local não resolve. O import foi alterado para um caminho relativo, sem nova dependência.
-- A primeira inicialização após o build mostrou erros transitórios de resolução de CSS no Turbopack. A recompilação terminou, a página e o CSS responderam 200, e uma nova leitura do log não apresentou erros.
+A V2 atual apresenta hero, benefícios, serviços, problemas, processo, diferenciais, FAQ e chamada final. A seção “Possibilidades” foi removida em 22/10/2026 por solicitação do usuário. As três prévias em HTML/CSS permanecem no hero; não representam clientes ou produtos entregues.
 
-## Riscos e pendências
+`MobileMenu`, `HeroProductVisual` e `ScrollMotion` são as três fronteiras cliente. As demais seções permanecem no servidor. O menu fecha por Escape com retorno do foco e permite rolagem interna em telas baixas. FAQ usa elementos nativos e funciona sem JavaScript.
 
-- Substituir o número de exemplo pelo WhatsApp oficial e revisar as notas demonstrativas antes de publicar.
-- Informar domínio canônico antes de configurar URLs absolutas de otimização para mecanismos de busca e compartilhamento.
-- Aprovar qualquer portfólio, case, depoimento, métrica ou canal comercial antes de publicar.
-- Reavaliar dependências e auditoria antes de uma entrega pública.
-- Executar deploy apenas mediante autorização explícita.
+O usuário pediu rotação contínua de cinco segundos sem botão de pausa, inclusive após seleção, hover e foco. Movimento reduzido e aba oculta interrompem o timer. A ausência de pausa permanece uma exceção de acessibilidade em WCAG 2.2.2; a auditoria pediu nova preferência, sem substituir a decisão anterior por silêncio. Detalhes em [Design](design.md).
 
-## Ajuste dos CTAs em 21/10/2026
+Condição de revisão: mudanças na galeria, no menu ou nos efeitos exigem testar teclado, foco, movimento reduzido, rotação e limpeza dos timers.
 
-- Fonte: solicitação do usuário para direcionar todos os CTAs ao WhatsApp com mensagem e centralizar um número brasileiro de exemplo.
-- Configuração: `src/config/site.ts`, campo `contact.whatsapp.phone`; mensagens gerais e por serviço preservadas. A chamada secundária do hero também abre o WhatsApp.
-- Verificação: `npm run check` aprovado (lint, tipos, lint tipado, regras locais, 7 testes e build). O HTML gerado contém nove CTAs com destino `wa.me`, mesmo número e mensagem preenchida, sem CTA desabilitado. O menu móvel usa a mesma configuração e componente compartilhado.
-- Revisão visual não executada: navegador integrado sem ferramenta disponível nesta sessão e `agent-browser` ausente do PATH.
-- Condição de revisão: substituir o número temporário e revisar os textos demonstrativos quando o contato oficial for fornecido.
+## Skills e ferramentas
 
-## Condição de revisão
+As skills versionadas ficam em `.agents/skills/`; `skills-lock.json` registra origem e hash. Orientações React, de interface e de escrita foram aplicadas. A existência dos arquivos não comprova descoberta ou execução numa nova sessão.
 
-Mudanças de stack, comandos, estrutura, marca, canal de contato ou escopo invalidam a evidência correspondente. Atualize este documento junto com a mudança; não converta uma pendência externa em integração simulada.
+`next-dev-loop` depende de `agent-browser` e do MCP do Next.js. `agent-browser` e a ferramenta do navegador integrado não estavam disponíveis nesta auditoria; o fluxo da skill não foi alegado como executado. A revisão usa Playwright e axe-core em pastas temporárias, sem adicionar dependências ao projeto.
 
-## Criativos e movimento — 21/10/2026
+As skills de Vercel não autorizam deploy, conta ou token. Nenhum push, publicação, serviço pago ou configuração global foi realizado nesta auditoria.
 
-Esta atualização substitui as limitações da revisão visual inicial para as áreas verificadas abaixo.
+## Verificação atual
 
-- Três imagens geradas com `image_gen`, inspecionadas e salvas como WebP em `public/images/`; origem e prompts completos em `docs/creatives.md`. As três juntas somam aproximadamente 180 KB.
-- Galeria manual no hero com transição de opacidade e escala, seleção por teclado e legenda anunciada. As imagens também aparecem nos exemplos de aplicações.
-- Revelações por `IntersectionObserver` e Web Animations, sem ocultação inicial do conteúdo e sem biblioteca nova. A mudança para movimento reduzido cancela animações em execução. Há zoom no hover e indicador de progresso CSS nos navegadores compatíveis.
-- Logo oficial preservada; apenas margens vazias foram removidas no arquivo derivado usado pelo header e rodapé. O favicon, o ícone PNG e o ícone Apple derivam do símbolo oficial sobre preto.
-- Guias consultados na versão instalada: `node_modules/next/dist/docs/01-app/01-getting-started/12-images.md` e `01-app/03-api-reference/03-file-conventions/01-metadata/app-icons.md`. O uso alterado de `next/image` evita a propriedade `priority`, depreciada nesta versão.
-- Lint, TypeScript, lint tipado, regras locais, sete testes e build estático executados com sucesso. O primeiro build identificou a exigência de PNG RGBA dentro do ICO; o ativo foi corrigido e o build passou.
-- Chromium via Playwright temporário, sem dependência adicionada ao projeto: hero e aplicações inspecionados em 390, 768 e 1440 px; troca por mouse e teclado; imagens carregadas; um H1; ausência de overflow horizontal e de erros JavaScript. Capturas locais em `/tmp/olimbo-{largura}.png` e `/tmp/olimbo-applications-{largura}.png` são evidência temporária, não ativos da aplicação.
-- Movimento reduzido verificado com emulação: galeria responde imediatamente, animações em execução são canceladas e a barra de progresso fica desativada. Conteúdo e primeiro criativo também conferidos com JavaScript desabilitado.
-- `/favicon.ico`, `/icon.png` e `/apple-icon.png` responderam 200 com os tipos de imagem esperados. O endpoint MCP do Next.js retornou `issues: []` para `get_compilation_issues`.
-- `next-dev-loop` não foi executado como fluxo completo: `agent-browser` não estava no PATH. O navegador integrado não expôs a ferramenta de execução exigida pela skill. A revisão visual acima foi feita com Playwright independente, sem alegar introspecção React do fluxo da skill.
-- Um servidor de outro checkout em `localhost:3000` foi preservado. A prévia deste checkout usa `http://localhost:3001`.
-- `npm audit` encontrou cinco alertas altos na cadeia de desenvolvimento `eslint-config-next → fast-glob → micromatch → braces`. A correção automática sugeria downgrade incompatível de Next/ESLint; nenhuma dependência foi alterada nesta tarefa. Reavaliar antes de publicação.
+`npm run check` executa lint, tipos, lint tipado, regras locais, nove testes e build estático. O build dentro do sandbox ficou sem avançar na compilação e foi interrompido; a execução autorizada fora dele concluiu os checks. Os diretórios de desenvolvimento e produção do Next.js instalado são separados; a prévia ativa foi preservada.
 
-Rever estas evidências se imagens, ícones, layout, movimento, versões ou fronteiras cliente forem alterados. Não houve deploy ou integração comercial nova.
+A prévia de desenvolvimento deste checkout fica em `http://localhost:3001`. O build de produção foi servido temporariamente na porta 3003 para a auditoria, e esse processo foi encerrado após os testes. Processos de outras cópias do repositório não foram alterados.
 
-## Troca de marca para Olimbo — 22/10/2026
+Os relatórios de navegador, dimensões, resultados de acessibilidade e limitações estão na [auditoria final](audit-2026-10-23.md). Capturas e ferramentas temporárias não são ativos da aplicação.
 
-- Fonte: solicitação do usuário para substituir todas as logos, o nome e o ícone da página por Olimbo; referências fornecidas pelo usuário, agora preservadas fora da pasta pública; ver `docs/creatives.md`.
-- Originais preservados. Cabeçalho e rodapé usam um recorte da horizontal; hero, favicon ICO (16/32/48 px), ícone PNG (192 px) e Apple (180 px) derivam do símbolo, sem redesenho ou geração por IA. Detalhes em `docs/creatives.md` e `docs/design.md`.
-- Nome atualizado nos textos, rótulos acessíveis, metadados de busca/compartilhamento, perguntas frequentes, dados estruturados derivados e mensagens de WhatsApp. A seção institucional passa a se chamar `WhyOlimboSection`. Os criativos sem logo e os nomes internos de tokens CSS permanecem preservados.
-- Guias consultados no Next.js instalado: `01-app/01-getting-started/12-images.md` e `01-app/03-api-reference/03-file-conventions/01-metadata/app-icons.md` em `node_modules/next/dist/docs/`.
-- `npm run check` aprovado: lint, tipos, lint tipado, regras locais, três arquivos/sete testes e build estático. `git diff --check` aprovado.
-- Chromium via Playwright temporário em `/tmp/olimbo-visual-qa`, sem dependência adicionada ao projeto: revisão visual em 390, 768 e 1440 px; logos carregadas em cabeçalho e rodapé; ausência de overflow horizontal e erros JavaScript; título Olimbo e ausência da marca anterior no texto da página; CTAs com mensagens Olimbo; menu móvel abre e fecha por Escape; ícones vinculados retornam HTTP 200 e tipo de imagem. Capturas em `/tmp/olimbo-{largura}.png` e `/tmp/olimbo-footer-{largura}.png` são evidência temporária.
-- O Browser integrado não expôs a ferramenta Node REPL exigida pela skill, e `agent-browser` não estava no PATH. Não foi alegada execução de `next-dev-loop` ou introspecção React; a revisão foi feita em Chromium independente.
-- Prévia local do build deste checkout em `http://localhost:3001`. Nenhum deploy, publicação ou alteração de dependências do projeto.
-- Condição de revisão: alterar as referências oficiais, o desenho da logo, os ícones ou o layout invalida as evidências correspondentes.
+## Dependências e publicação
 
-## Cenas fotográficas dos serviços — 22/10/2026
+Em 23/10/2026, `npm audit --omit=dev` retornou zero vulnerabilidades. `npm audit` retornou cinco alertas altos na cadeia `eslint-config-next → fast-glob → micromatch → braces`. O [aviso publicado](https://github.com/advisories/GHSA-vfj7-8cjw-p6xm) informa que não há versão corrigida de `braces`; a correção automática observada sugere downgrade incompatível do preset Next.js. Nenhum downgrade foi aplicado.
 
-- Fonte: solicitação do usuário para revisar todas as imagens e substituir o aspecto artificial por cenas mais realistas que comuniquem o uso dos serviços.
-- Três cenas geradas com a ferramenta integrada `image_gen`, inspecionadas individualmente e convertidas com Sharp para WebP (1536 × 1024, qualidade 84). Ativos em `public/images/olimbo-{websites,software,automation}.webp`, aproximadamente 342 KiB no total. Prompts completos em `docs/image-prompts-2026-10-22.md`.
-- As cenas substituem todas as imagens 3D no hero e nas aplicações. Logos e ícones oficiais preservados; as microilustrações de benefícios continuam em HTML/CSS. As cenas são identificadas como ilustrativas geradas por IA, sem alegação de clientes ou resultados reais.
-- Guia instalado de imagens Next.js consultado; `next/image`, carregamento prioritário da primeira imagem, lazy loading das demais e dimensões responsivas mantidos, sem novas dependências.
-- Lint, tipos, lint tipado, sete testes e `git diff --check` aprovados.
-- Chromium via Playwright temporário: três seleções da galeria e carregamento das aplicações verificados em 390, 768 e 1440 px, sem overflow horizontal ou erros JavaScript. Capturas de hero e aplicações inspecionadas; evidência temporária em `/tmp/olimbo-photos-*.png`.
-- Node REPL do Browser integrado indisponível nas ferramentas da sessão; `agent-browser` ausente. Não foi executado o fluxo `next-dev-loop`; a verificação usou Chromium independente já instalado em `/tmp/olimbo-visual-qa`, sem adicionar dependência ao projeto.
-- Prévia de desenvolvimento deste checkout em `http://localhost:3002`. Nenhum deploy ou publicação.
-- Condição de revisão: alterar imagens, recortes, layout ou controles invalida as evidências visuais correspondentes.
+Em 23/10/2026, o usuário definiu `https://olimbo.dev.br` como domínio definitivo. Canonical, sitemap e URLs absolutas foram configurados para essa origem. A associação na Cloudflare e o DNS ainda dependem de ação autorizada na conta. Revise mensagens comerciais, dependências e a exceção de acessibilidade antes da publicação. Deploy e push exigem autorização explícita.
 
-## Identidade única e transparência — 22/10/2026
+## Preparação para Cloudflare Pages: 23/10/2026
 
-Esta revisão substitui as decisões anteriores de manter fundos marfim e arquivos públicos históricos da identidade anterior.
-
-- Fonte: pedido explícito do usuário para usar exclusivamente Olimbo e remover o fundo de todas as logos, incluindo o ícone da aba.
-- `image_gen` integrado removeu o fundo da referência horizontal. A imagem foi inspecionada sobre marfim, com transparência real também nos espaços do símbolo e dentro das letras. As versões horizontal, símbolo e vertical usam a mesma saída e preservam o canal alpha; arquivos e prompt integral em `docs/creatives.md`.
-- Logos com novas URLs em `public/brand/olimbo-logo-{horizontal,vertical,symbol}.png`. Todos os ícones foram recriados a partir do símbolo transparente; `layout.tsx` aponta para `/brand/olimbo-favicon.png` e `/apple-icon.png`. A nova URL renova a referência do favicon no navegador.
-- Removidos os ativos e o guia da marca anterior da pasta pública. Nomes do pacote, tokens CSS e documentação usam Olimbo. As referências originais com fundo ficam preservadas fora do projeto em `~/.codex/generated_images/olimbo-reference-originals/`.
-- Lint, tipos, lint tipado, regras locais, sete testes, build estático e `git diff --check` aprovados.
-- Canal alpha conferido nos três PNGs de logo e nos ícones PNG. Chromium independente: logos entregues pelo otimizador também mantêm alpha; novo favicon vinculado e acessível; logos sem retângulo de fundo em cabeçalho, hero e rodapé; 390, 768 e 1440 px sem overflow ou erros JavaScript; URLs antigas verificadas retornam 404. Capturas temporárias em `/tmp/olimbo-transparent-*.png`.
-- A ferramenta exigida pelo Browser integrado permanece indisponível; revisão com Playwright temporário existente, sem nova dependência no projeto ou alegação de execução de `next-dev-loop`.
-- Prévia de desenvolvimento em `http://localhost:3002`; prévia do build em `http://localhost:3001`, reiniciada após a atualização para carregar os novos arquivos e metadados.
-- Condição de revisão: alterar logos, ícones, metadados ou layout exige conferir novamente transparência e apresentação no navegador.
-
-## Revisão integral do nome — 22/10/2026
-
-- Fonte: solicitação do usuário para usar Olimbo em toda a documentação, código, configuração, nomes de arquivos e imagens.
-- As alterações locais de identidade foram preservadas. README e critérios de aceitação do produto explicitam o uso exclusivo de Olimbo; o nome do pacote também foi sincronizado no lockfile local das dependências instaladas.
-- Busca sem distinção entre maiúsculas e minúsculas, incluindo arquivos ocultos e conteúdo binário: nenhuma ocorrência do nome anterior nos arquivos atuais do projeto. Logos horizontal, vertical e símbolo e as três imagens de serviços foram inspecionadas visualmente.
-- O histórico e os metadados do Git, o caminho externo deste workspace, dependências de terceiros e caches gerados não integram essa garantia. O vínculo do worktree foi preservado para não invalidar o checkout.
-- Lint, tipos, lint tipado, regras locais, três arquivos/sete testes e `git diff --check` aprovados nesta revisão.
-- O build desta revisão foi interrompido após permanecer na etapa de compilação sem emitir resultado; não foi considerado aprovado. As evidências de build das entregas anteriores acima não substituem essa verificação.
-- Condição de revisão: ao adicionar ou substituir conteúdo, documentação ou ativos, conferir nome, conteúdo visual e referências de arquivo antes de integrar.
-
-## Referência única de favicon — 22/10/2026
-
-- Fonte: usuário informou que ainda via o favicon da identidade anterior.
-- Inspeção encontrou dois links `rel="icon"`. O ICO foi movido de `src/app/favicon.ico` para `public/favicon.ico`, preservando a URL de fallback sem gerar um link automático adicional.
-- `layout.tsx` define apenas `/brand/favicon-olimbo-v2.png` (64 × 64), derivado do símbolo transparente da Olimbo. Endereço diferente dos anteriores para renovar a referência no navegador. O ícone Apple permanece vinculado.
-- Chromium: exatamente um `rel="icon"`, apontando para o novo PNG; resposta HTTP 200 com bytes idênticos ao arquivo da Olimbo; `/favicon.ico` também retorna o ICO correto. Lint, tipos e `git diff --check` aprovados.
-- Build adicional não executado: outro processo `next build` deste checkout já estava em execução e detinha o lock; esse processo foi preservado. A prévia de desenvolvimento foi consolidada em `http://localhost:3001` para servir os arquivos e metadados atuais, substituindo o servidor de produção anterior na mesma porta.
-- Condição de revisão: trocar os ícones ou sua configuração exige verificar o HTML renderizado e os bytes servidos; o favicon deve ter uma única referência explícita da Olimbo.
-
-## Favicon sem fundo — 22/10/2026
-
-- Fonte: solicitação do usuário para remover o fundo do favicon.
-- O arquivo anterior já continha alpha, mas a inspeção encontrou pixels de alpha residual nas bordas após o redimensionamento. O novo `/brand/favicon-olimbo-transparente.png` usa o símbolo da Olimbo dentro de uma área explicitamente transparente, sem preenchimento de fundo. O fallback `/favicon.ico` foi reexportado com margem transparente nas três resoluções.
-- Nova URL vinculada em `layout.tsx` para evitar a referência anterior armazenada. Verificação dos pixels do PNG: quatro canais RGBA, todas as bordas com alpha zero e 71% dos pixels totalmente transparentes.
-- Lint e tipos aprovados. Chromium confirmou o novo endereço no HTML e resposta PNG com canal alpha. Esta verificação cobre o servidor local; a aba da captura anterior continua sem URL informada pelo usuário.
-- Condição de revisão: verificar o alpha novamente após converter ou redimensionar o favicon.
-
-## Divergência entre a aba e os arquivos servidos — 22/10/2026
-
-- Fonte: nova captura do usuário mostrando o símbolo anterior, apesar das verificações HTTP anteriores em localhost:3001. Essas verificações não confirmam o ícone exibido na aba do usuário.
-- A ferramenta necessária para controlar a aba integrada permanece indisponível. A captura parece ser do Safari; foi solicitado ao usuário confirmar o navegador. Leitura do cache local do Safari bloqueada pelo macOS; nenhum dado ou configuração do navegador foi alterado.
-- IPv4 e IPv6 de localhost:3001 servem a mesma imagem atual. O ícone Apple ainda usava a URL histórica `/apple-icon.png`; recebeu endereço específico da Olimbo. PNGs de 16/32 px e ICO também têm endereços próprios; todos transparentes. Cabeçalhos `no-store` foram limitados aos ícones para evitar armazenamento das respostas novas.
-- Chromium confirmou as quatro referências atuais no HTML, respostas HTTP 200, transparência e `Cache-Control: no-store, max-age=0`. Lint, tipos e `git diff --check` aprovados. Um único servidor local em localhost:3001.
-- Pendente: confirmar que a aba do usuário passou a exibir a Olimbo. Não declarar essa confirmação com base em inspeção do arquivo ou teste em outro navegador.
-- Condição de revisão: se a divergência persistir, investigar o navegador confirmado e sua seleção/cache de ícones sem repetir gerações de logo ou encerrar outros aplicativos.
+- Fonte: solicitação explícita do usuário para preparar exportação estática e domínio `https://olimbo.dev.br`, preservando visuais, animações e galeria contínua sem pausa, sem executar publicação ou operações Git
+- Compatibilidade confirmada pelo código e por build com `output: "export"`: sem dados por requisição, API, Server Actions ou runtime Node.js na saída
+- Configuração: `images.unoptimized: true`, `robots.ts` e `sitemap.ts` estáticos, domínio em `siteConfig.url`, metadataBase/canonical, Open Graph, Twitter Card e identidade da FAQ no JSON-LD
+- Ícones preservam os bytes; cabeçalhos `no-store` foram migrados para `public/_headers`. Fontes WOFF2 são locais. Nenhum arquivo ou componente visual foi modificado nesta preparação
+- `.node-version` fixa Node.js 24.14.0. `npm run build` gera `out/` e executa `check:export`; `next start` foi removido por não se aplicar ao modo estático. Nenhuma dependência foi adicionada
+- `npm run check` final aprovado: lint, tipos, lint tipado, regras locais, nove testes, build estático e verificador de exportação. `git diff --check` e links locais da documentação aprovados
+- `scripts/verify-static-export.mjs` confirmou 37 arquivos e cerca de 1,4 MB, com referências de assets válidas, metadados e sitemap corretos, sem arquivos privados, credenciais reconhecidas ou ferramentas de lint na saída
+- `npm audit --json` e `npm audit --include=dev --json` retornaram zero alertas na consulta atual. `npm ls` confirmou que a cadeia ESLint e `braces@3.0.3` não mudaram. Não foi inferida correção de biblioteca; os cinco alertas anteriores não se reproduziram, e a cadeia não integra a aplicação publicada
+- A exportação servida como arquivos estáticos em 127.0.0.1:3003 passou em Chromium e WebKit nas dez dimensões da auditoria anterior, sem erros JavaScript ou requisições com falha. Galeria, menu, FAQ, contatos, fontes, imagens, SEO, movimento reduzido, fonte a 200% e uso sem JavaScript conferidos. Seis execuções axe-core não encontraram violações automáticas; permanece a exceção conhecida de rotação sem pausa
+- Ferramentas e relatórios temporários: `/tmp/olimbo-visual-qa/static-export-audit.cjs` e `/tmp/olimbo-static-export-audit/{chromium,webkit}/report.json`. O servidor temporário serviu somente `out/` e foi encerrado após os testes. Ele não aplica `_headers`; os cabeçalhos foram validados pelo arquivo exportado
+- Painel, DNS, certificado e domínio na conta não foram consultados ou alterados. Não houve commit, push, merge ou deploy. O [guia de Cloudflare Pages](cloudflare-pages.md) contém os campos e os dados que precisam vir da conta real
+- Condição de revisão: mudanças em domínio, rotas, dados dinâmicos, assets ou dependências exigem repetir a exportação, inspeção de saída e testes de navegador

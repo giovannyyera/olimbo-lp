@@ -1,7 +1,6 @@
 export const siteConfig = {
   name: "Olimbo",
-  description:
-    "Criamos sites profissionais, sistemas personalizados e automações para transformar necessidades em soluções digitais.",
+  url: "https://olimbo.dev.br",
   navigation: [
     { label: "Soluções", href: "#solucoes" },
     { label: "Como trabalhamos", href: "#processo" },
@@ -10,28 +9,40 @@ export const siteConfig = {
   ],
   benefits: [
     {
-      title: "Mais oportunidades",
+      label: "Presença digital",
+      title: "Seu negócio bem apresentado",
       description:
-        "Tenha uma presença digital profissional e facilite o caminho entre o interesse do cliente e o primeiro contato.",
+        "Mostre o valor do que você faz em um site próprio, com seus serviços claros e o contato a um clique.",
       visual: "opportunities",
+      href: "#solucao-sites",
+      linkLabel: "Conhecer sites e landing pages",
     },
     {
-      title: "Menos tarefas repetitivas",
+      label: "Tempo para o que importa",
+      title: "Menos copiar e colar",
       description:
-        "Automatize processos manuais e libere tempo para o que realmente importa.",
+        "Informações que passam de uma ferramenta para outra sem você repetir o mesmo trabalho a cada nova demanda.",
       visual: "automation",
+      href: "#solucao-automacoes",
+      linkLabel: "Explorar automações",
     },
     {
-      title: "Processos mais organizados",
+      label: "Clareza para decidir",
+      title: "Sua operação em uma só visão",
       description:
-        "Centralize informações e facilite a rotina com sistemas desenvolvidos para sua necessidade.",
+        "Reúna demandas, dados e andamento do trabalho em um sistema pensado para o jeito que sua equipe funciona.",
       visual: "organization",
+      href: "#solucao-sistemas",
+      linkLabel: "Conhecer sistemas sob medida",
     },
     {
-      title: "Soluções feitas para você",
+      label: "Do plano ao próximo passo",
+      title: "Sua ideia com um caminho claro",
       description:
-        "Transforme uma necessidade específica em uma ferramenta digital que acompanhe seu projeto.",
+        "Entenda o que vale construir primeiro e transforme uma necessidade em um projeto com prioridades definidas.",
       visual: "custom",
+      href: "#solucao-consultoria",
+      linkLabel: "Entender a consultoria",
     },
   ],
   solutions: [
@@ -40,7 +51,7 @@ export const siteConfig = {
       number: "01",
       title: "Criação de sites e landing pages",
       description:
-        "Construa uma presença digital clara para apresentar seu negócio, apoiar campanhas e facilitar novos contatos.",
+        "Mostre o valor do seu negócio com uma experiência que apresenta seus serviços e conduz o visitante ao próximo passo.",
       items: [
         "Sites institucionais profissionais",
         "Landing pages para campanhas e geração de leads",
@@ -48,7 +59,7 @@ export const siteConfig = {
         "Estrutura preparada para SEO",
         "Foco em clareza e conversão",
       ],
-      ctaLabel: "Conversar sobre um site",
+      ctaLabel: "Quero um site para meu negócio",
       whatsappMessage:
         "Olá, Olimbo! Quero conversar sobre a criação de um site ou landing page.",
       layout: "wide",
@@ -58,7 +69,7 @@ export const siteConfig = {
       number: "02",
       title: "Desenvolvimento de sistemas sob medida",
       description:
-        "Organize processos e informações em uma ferramenta criada para o contexto da sua operação.",
+        "Dê à sua equipe um lugar para organizar informações, acompanhar tarefas e trabalhar com mais clareza.",
       items: [
         "Sistemas web personalizados",
         "Painéis administrativos",
@@ -66,7 +77,7 @@ export const siteConfig = {
         "Ferramentas internas",
         "Organização de processos e informações",
       ],
-      ctaLabel: "Conversar sobre um sistema",
+      ctaLabel: "Quero organizar minha operação",
       whatsappMessage:
         "Olá, Olimbo! Quero conversar sobre o desenvolvimento de um sistema sob medida.",
       layout: "standard",
@@ -76,7 +87,7 @@ export const siteConfig = {
       number: "03",
       title: "Automações e integrações",
       description:
-        "Conecte ferramentas e reduza etapas manuais em fluxos que hoje consomem tempo da sua rotina.",
+        "Faça suas ferramentas trabalharem juntas para evitar copiar dados e repetir o mesmo trabalho a cada nova demanda.",
       items: [
         "Automação de tarefas repetitivas",
         "Integração entre ferramentas",
@@ -84,7 +95,7 @@ export const siteConfig = {
         "Redução de atividades manuais",
         "Processos mais eficientes",
       ],
-      ctaLabel: "Conversar sobre automação",
+      ctaLabel: "Quero automatizar minha rotina",
       whatsappMessage:
         "Olá, Olimbo! Quero conversar sobre automações e integrações para o meu negócio.",
       layout: "standard",
@@ -94,7 +105,7 @@ export const siteConfig = {
       number: "04",
       title: "Consultoria e soluções digitais",
       description:
-        "Transforme uma necessidade ainda aberta em um caminho técnico compreensível e proporcional ao projeto.",
+        "Tire sua ideia do campo das dúvidas. Organize prioridades, avalie possibilidades e defina o que construir primeiro.",
       items: [
         "Análise de necessidades",
         "Planejamento de soluções",
@@ -102,7 +113,7 @@ export const siteConfig = {
         "Transformação de ideias em projetos",
         "Orientação técnica",
       ],
-      ctaLabel: "Conversar sobre uma ideia",
+      ctaLabel: "Quero tirar uma ideia do papel",
       whatsappMessage:
         "Olá, Olimbo! Tenho uma necessidade digital e quero entender qual solução faz sentido.",
       layout: "wide",
@@ -112,55 +123,32 @@ export const siteConfig = {
     {
       problem: "Minha empresa ainda não tem um site profissional.",
       solution:
-        "Um site institucional pode organizar sua apresentação, seus serviços e o caminho para contato.",
+        "Apresente seus serviços em um site próprio, com uma mensagem clara e contato fácil de encontrar.",
       service: "Sites e landing pages",
     },
     {
       problem: "Perco tempo executando as mesmas tarefas.",
       solution:
-        "Uma automação pode assumir etapas repetitivas e manter o fluxo mais consistente.",
+        "Conecte as etapas repetitivas em um fluxo de automação, conforme as ferramentas que você já usa.",
       service: "Automações",
     },
     {
       problem: "Uso planilhas demais para controlar meus processos.",
       solution:
-        "Um sistema sob medida pode centralizar dados, rotinas e acompanhamento em um só ambiente.",
+        "Centralize dados e acompanhamento em um sistema organizado em torno dos seus processos.",
       service: "Sistemas personalizados",
     },
     {
       problem: "Tenho uma ideia, mas não sei como transformá-la em software.",
       solution:
-        "O planejamento técnico pode organizar objetivos, prioridades e o primeiro escopo viável.",
+        "Transforme a ideia em prioridades, funcionalidades e um primeiro escopo para desenvolver.",
       service: "Consultoria digital",
     },
     {
       problem: "Meus sistemas não se comunicam.",
       solution:
-        "Integrações podem conectar ferramentas e reduzir transferências manuais de informação.",
+        "Avalie integrações para que a informação circule entre ferramentas sem depender de copiar e colar.",
       service: "Integrações",
-    },
-  ],
-  applications: [
-    {
-      type: "website",
-      label: "Exemplo ilustrativo",
-      title: "Site institucional",
-      description:
-        "Uma experiência clara para apresentar serviços, organizar argumentos e orientar o visitante ao contato.",
-    },
-    {
-      type: "dashboard",
-      label: "Exemplo ilustrativo",
-      title: "Painel de gerenciamento",
-      description:
-        "Uma visão centralizada para acompanhar informações e apoiar a rotina de uma operação.",
-    },
-    {
-      type: "workflow",
-      label: "Exemplo ilustrativo",
-      title: "Fluxo de automação",
-      description:
-        "Uma sequência conectada de etapas para reduzir tarefas manuais entre ferramentas.",
     },
   ],
   process: [
@@ -168,33 +156,26 @@ export const siteConfig = {
       number: "01",
       title: "Entendemos seu desafio",
       description:
-        "A conversa inicial organiza o contexto, a necessidade e o resultado pretendido.",
+        "Você conta como trabalha, o que está travando sua rotina e o que quer construir.",
     },
     {
       number: "02",
       title: "Definimos o melhor caminho",
       description:
-        "A proposta transforma prioridades e restrições em uma direção clara para o projeto.",
+        "Organizamos prioridades e escopo para você entender o que será feito antes de começar.",
     },
     {
       number: "03",
       title: "Desenvolvemos a solução",
       description:
-        "A construção acontece em etapas coerentes com o escopo e com as decisões do projeto.",
+        "Transformamos o escopo em interfaces e funcionalidades, com atenção ao uso e à execução técnica.",
     },
     {
       number: "04",
       title: "Validamos e preparamos a entrega",
       description:
-        "A solução é revisada com base no objetivo definido antes da preparação para uso.",
+        "Revisamos os fluxos e funcionalidades em relação ao escopo definido e preparamos a solução para uso.",
     },
-  ],
-  principles: [
-    "Entendimento da necessidade antes da tecnologia",
-    "Soluções adequadas ao contexto do cliente",
-    "Experiência clara e intuitiva",
-    "Atenção à qualidade técnica",
-    "Comunicação clara e objetiva",
   ],
   faq: [
     {
@@ -210,12 +191,12 @@ export const siteConfig = {
     {
       question: "A Olimbo desenvolve sistemas personalizados?",
       answer:
-        "Sim. A proposta de um sistema sob medida é atender processos, informações e necessidades que ferramentas genéricas não resolvem de forma adequada.",
+        "Sim. Desenvolvemos sistemas web, painéis e ferramentas internas a partir dos processos que você precisa organizar. O escopo considera sua rotina, as informações envolvidas e quem vai usar a solução.",
     },
     {
       question: "É possível automatizar processos da minha empresa?",
       answer:
-        "Muitos processos repetitivos podem ser automatizados ou integrados. A viabilidade depende das etapas envolvidas e das ferramentas que já fazem parte da operação.",
+        "Podemos avaliar tarefas como transferir dados entre ferramentas, encaminhar informações e atualizar etapas de um processo. A viabilidade depende das ferramentas e dos acessos disponíveis na sua operação.",
     },
     {
       question: "Posso solicitar melhorias em um sistema existente?",
@@ -225,23 +206,22 @@ export const siteConfig = {
     {
       question: "Preciso saber exatamente o que quero desenvolver?",
       answer:
-        "Não. Você pode começar explicando o problema, a rotina ou a ideia. A conversa inicial ajuda a organizar possibilidades e a identificar qual solução faz sentido.",
+        "Não. Conte o que toma seu tempo, o que você quer melhorar ou qual ideia deseja colocar em prática. A partir disso, organizamos as possibilidades e o que faz sentido desenvolver primeiro.",
     },
     {
       question: "Como solicitar um orçamento?",
       answer:
-        "Use os botões desta página para abrir o WhatsApp com uma mensagem pronta e compartilhar o contexto do projeto. Por enquanto, o destino usa um número de exemplo.",
+        "Use os botões desta página para abrir o WhatsApp com uma mensagem pronta e compartilhar o contexto do projeto.",
     },
   ],
   contact: {
     whatsapp: {
-      // Número de exemplo: substitua pelo WhatsApp oficial antes de publicar.
-      phone: "+55 (11) 99999-9999" as string | null,
+      phone: "+55 (18) 99671-6753" as string | null,
       message:
         "Olá, Olimbo! Quero conversar sobre uma solução digital para o meu projeto.",
-      note: "WhatsApp configurado com número de exemplo para demonstração.",
+      note: "Converse com a Olimbo pelo WhatsApp.",
       unavailableMessage:
-        "O canal oficial de WhatsApp ainda está sendo confirmado.",
+        "O WhatsApp está indisponível no momento.",
     },
   },
 } as const;

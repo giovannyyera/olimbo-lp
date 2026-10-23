@@ -5,14 +5,13 @@ export function ProblemSolutionSection() {
     <section className="problem-section reveal" id="problemas">
       <div className="shell problem-layout">
         <div className="problem-intro">
-          <p className="eyebrow eyebrow-dark">Problema e possibilidade</p>
+          <p className="eyebrow eyebrow-dark">Da rotina à solução</p>
           <h2>
-            Se a tecnologia ainda não está facilitando sua vida, existe espaço
-            para melhorar.
+            O que está tomando o tempo do seu negócio?
           </h2>
           <p>
-            Identifique uma situação próxima da sua rotina e veja um caminho
-            digital que pode ser avaliado com a Olimbo.
+            Se uma destas situações faz parte do seu dia, podemos conversar
+            sobre um caminho mais simples para resolvê-la.
           </p>
         </div>
         <div className="problem-list">
@@ -28,7 +27,7 @@ export function ProblemSolutionSection() {
                   <span />
                   <i>↓</i>
                 </div>
-                <p className="problem-label">Possível caminho</p>
+                <p className="problem-label">O caminho digital</p>
                 <p>{item.solution}</p>
               </div>
               <span className="problem-service">{item.service}</span>

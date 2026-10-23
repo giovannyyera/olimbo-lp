@@ -1,8 +1,8 @@
 import { siteConfig } from "@/config/site";
 
-import { BrandLogo } from "./brand-logo";
-import { ContactCta } from "./contact-cta";
-import { MobileMenu } from "./mobile-menu";
+import { BrandLogo } from "@/components/brand-logo";
+import { ContactCta } from "@/components/contact-cta";
+import { MobileMenu } from "@/components/mobile-menu";
 
 export function SiteHeader() {
   return (

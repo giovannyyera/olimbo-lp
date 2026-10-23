@@ -1,6 +1,6 @@
 import { siteConfig } from "@/config/site";
 
-import { ContactCta } from "../contact-cta";
+import { ContactCta } from "@/components/contact-cta";
 
 export function FinalCtaSection() {
   return (
@@ -15,16 +15,16 @@ export function FinalCtaSection() {
       <div className="shell final-cta-grid">
         <div>
           <p className="eyebrow eyebrow-dark">O próximo passo</p>
-          <h2>Seu próximo projeto pode começar hoje.</h2>
+          <h2>Qual ideia você quer colocar em movimento?</h2>
         </div>
         <div className="final-cta-copy">
           <p>
-            Conte o que você precisa. Seja um site, um sistema, uma automação
-            ou uma ideia ainda no papel, vamos conversar sobre as possibilidades.
+            Conte o que você quer construir ou melhorar. Vamos entender seu
+            cenário e conversar sobre uma solução que faça sentido para o seu negócio.
           </p>
           <ContactCta
             contact={siteConfig.contact.whatsapp}
-            label="Conversar com a Olimbo"
+            label="Vamos conversar sobre meu projeto"
             className="final-cta-button"
           />
           <p className="contact-status">

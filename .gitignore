@@ -79,6 +79,9 @@ web_modules/
 out
 .vercel/
 
+# Official logo source variants; only optimized assets in public/ are published
+/olimbo_logos_png/
+
 # Nuxt.js build / generate output
 .nuxt
 dist

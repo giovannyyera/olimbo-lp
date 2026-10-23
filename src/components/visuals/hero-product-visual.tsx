@@ -1,15 +1,55 @@
 "use client";
 
-import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState, useSyncExternalStore, type ReactNode } from "react";
 
 import { creatives } from "@/config/creatives";
 
-export function HeroProductVisual() {
+const motionQuery = "(prefers-reduced-motion: reduce)";
+
+function subscribeMotion(onChange: () => void) {
+  const preference = window.matchMedia(motionQuery);
+  preference.addEventListener("change", onChange);
+  return () => preference.removeEventListener("change", onChange);
+}
+
+function getReducedMotion() {
+  return window.matchMedia(motionQuery).matches;
+}
+
+export function HeroProductVisual({ previews }: { previews: ReactNode[] }) {
   const [selected, setSelected] = useState(0);
+  const reducedMotion = useSyncExternalStore(subscribeMotion, getReducedMotion, () => true);
+  const rotating = !reducedMotion;
+
+  useEffect(() => {
+    if (!rotating) return;
+    let timer: ReturnType<typeof setInterval> | undefined;
+
+    function syncTimer() {
+      clearInterval(timer);
+      if (!document.hidden) {
+        timer = setInterval(() => {
+          setSelected((current) => (current + 1) % creatives.length);
+        }, 5000);
+      }
+    }
+
+    syncTimer();
+    document.addEventListener("visibilitychange", syncTimer);
+    return () => {
+      clearInterval(timer);
+      document.removeEventListener("visibilitychange", syncTimer);
+    };
+  }, [rotating]);
 
   return (
-    <figure className="hero-showcase" aria-label="Explore nossas soluções em imagens">
+    <figure
+      className="hero-showcase"
+      aria-label="Explore as possibilidades para seu negócio"
+    >
+      <div className="showcase-heading">
+        <span>DO PRIMEIRO CLIQUE À PRÓXIMA ETAPA</span>
+      </div>
       <div className="showcase-stage">
         {creatives.map((creative, index) => (
           <div
@@ -19,21 +59,9 @@ export function HeroProductVisual() {
             aria-hidden={selected !== index}
             key={creative.id}
           >
-            <Image
-              src={creative.src}
-              alt={creative.alt}
-              fill
-              sizes="(min-width: 1024px) 45vw, (min-width: 640px) 544px, 100vw"
-              loading={index === 0 ? "eager" : "lazy"}
-              fetchPriority={index === 0 ? "high" : "auto"}
-            />
+            {previews[index]}
           </div>
         ))}
-        <div className="showcase-brand" aria-hidden="true">
-          <Image src="/brand/olimbo-logo-symbol.png" alt="" width={36} height={36} />
-          <span>Ideias em movimento.</span>
-        </div>
-        <span className="showcase-counter" aria-hidden="true">0{selected + 1} / 03</span>
       </div>
       <div className="showcase-controls" role="group" aria-label="Escolha uma solução">
         {creatives.map((creative, index) => (
@@ -48,9 +76,9 @@ export function HeroProductVisual() {
           </button>
         ))}
       </div>
-      <figcaption aria-live="polite" aria-atomic="true">
+      <figcaption aria-live={rotating ? "off" : "polite"} aria-atomic="true">
         <strong>{creatives[selected].title}</strong>
-        <span>Cena ilustrativa gerada por IA · Explore as possibilidades</span>
+        <span>{creatives[selected].description}</span>
       </figcaption>
     </figure>
   );

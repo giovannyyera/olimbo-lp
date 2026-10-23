@@ -3,11 +3,11 @@
 :root {
   --olimbo-black: #0b0b0b;
   --olimbo-gold: #fac202;
-  --olimbo-gold-deep: #d9a700;
+  --olimbo-gold-deep: #705500;
   --olimbo-ivory: #f7f6f2;
   --olimbo-paper: #fffefa;
   --olimbo-graphite: #414141;
-  --olimbo-muted: #727272;
+  --olimbo-muted: #686868;
   --olimbo-line: rgb(11 11 11 / 14%);
   --header-height: 4.75rem;
 }
@@ -80,8 +80,14 @@ p {
 }
 
 :focus-visible {
-  outline: 3px solid var(--olimbo-gold);
+  outline: 3px solid var(--olimbo-black);
   outline-offset: 4px;
+}
+
+.problem-section :focus-visible,
+.project-offer :focus-visible,
+.final-cta :focus-visible {
+  outline-color: var(--olimbo-gold);
 }
 
 .section-anchor {
@@ -122,7 +128,7 @@ p {
   font-size: clamp(2.25rem, 8vw, 4.7rem);
   font-weight: 650;
   letter-spacing: -0.055em;
-  line-height: 0.98;
+  line-height: 1.08;
 }
 
 .section-description {
@@ -131,15 +137,6 @@ p {
   color: var(--olimbo-graphite);
   font-size: clamp(1rem, 2vw, 1.12rem);
   line-height: 1.75;
-}
-
-.section-heading-dark .eyebrow,
-.section-heading-dark .section-description {
-  color: rgb(255 255 255 / 66%);
-}
-
-.section-heading-dark h2 {
-  color: white;
 }
 
 .contact-note,

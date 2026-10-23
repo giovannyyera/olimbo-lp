@@ -1,4 +1,3 @@
-import { ApplicationsSection } from "@/components/sections/applications-section";
 import { BenefitsSection } from "@/components/sections/benefits-section";
 import { FaqSection } from "@/components/sections/faq-section";
 import { FinalCtaSection } from "@/components/sections/final-cta-section";
@@ -25,7 +24,6 @@ export default function Home() {
         <BenefitsSection />
         <SolutionsSection />
         <ProblemSolutionSection />
-        <ApplicationsSection />
         <ProcessSection />
         <WhyOlimboSection />
         <FaqSection />

@@ -8,14 +8,14 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "build": "next build && npm run check:export",
     "lint": "eslint .",
     "typecheck": "next typegen && tsc --noEmit",
     "lint:typed": "eslint --config eslint.typed.config.mjs .",
     "lint:rules": "node scripts/verify-quality-rules.mjs ./eslint-rules/index.cjs",
     "test": "vitest run",
     "test:watch": "vitest",
+    "check:export": "node scripts/verify-static-export.mjs",
     "check": "npm run lint && npm run typecheck && npm run lint:typed && npm run lint:rules && npm test && npm run build"
   },
   "dependencies": {

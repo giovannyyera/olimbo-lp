@@ -1,3 +1,6 @@
+.section-heading { grid-template-columns: minmax(0, 1fr); }
+.section-heading > * { min-width: 0; }
+
 @keyframes hero-enter {
   from { opacity: 0; transform: translateY(1rem); }
   to { opacity: 1; transform: translateY(0); }
@@ -7,7 +10,6 @@
   from { opacity: 0; transform: translateY(1.25rem) scale(0.98); }
   to { opacity: 1; transform: translateY(0) scale(1); }
 }
-
 
 @media (hover: hover) {
   .desktop-nav a:hover,
@@ -31,26 +33,18 @@
     color: white;
   }
 
-  .text-link:hover {
-    border-color: var(--olimbo-gold-deep);
-    color: var(--olimbo-gold-deep);
-  }
-
   .benefit-card:hover,
-  .solution-bento:hover,
-  .application-card:hover {
+  .solution-bento:hover {
     border-color: rgb(11 11 11 / 32%);
     box-shadow: 0 1.25rem 3.5rem rgb(11 11 11 / 8%);
     transform: translateY(-4px);
   }
 
-  .benefit-card:hover .benefit-visual,
-  .application-card:hover .application-visual {
+  .benefit-card:hover .benefit-visual {
     transform: translateY(-3px);
   }
 
-  .benefit-visual,
-  .application-visual {
+  .benefit-visual {
     transition: transform 220ms ease;
   }
 
@@ -72,8 +66,7 @@
   }
 
   .section,
-  .problem-section,
-  .why-section {
+  .problem-section {
     padding-block: 7rem;
   }
 
@@ -85,30 +78,21 @@
     padding-block: 5rem 4rem;
   }
 
-  .hero-product-visual {
-    min-height: 34rem;
-  }
-
   .hero-capabilities {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .hero-capabilities span {
+  .hero-capabilities li {
     padding: 1rem;
     border-right: 1px solid var(--olimbo-line);
   }
 
-  .hero-capabilities span:first-child { padding-left: 0; }
-  .hero-capabilities span:last-child { border-right: 0; }
+  .hero-capabilities li:first-child { padding-left: 0; }
+  .hero-capabilities li:last-child { border-right: 0; }
 
   .benefits-grid,
-  .solutions-bento,
-  .applications-grid {
+  .solutions-bento {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .application-card:last-child {
-    grid-column: 1 / -1;
   }
 
   .problem-card {
@@ -148,23 +132,17 @@
   }
 
   .hero-grid {
-    grid-template-columns: minmax(0, 1.12fr) minmax(27rem, 0.88fr);
-    gap: 4rem;
-    padding-block: 5.5rem 4.5rem;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+    gap: 3rem;
+    padding-block: 4.5rem 3.5rem;
   }
 
   .hero h1 {
-    font-size: clamp(5rem, 7.3vw, 6.7rem);
-  }
-
-  .hero-product-visual {
-    width: 100%;
-    min-height: 35rem;
+    font-size: clamp(3.7rem, 5.6vw, 5.25rem);
   }
 
   .section,
-  .problem-section,
-  .why-section {
+  .problem-section {
     padding-block: 8.5rem;
   }
 
@@ -183,9 +161,14 @@
     grid-column: 2;
   }
 
-  .benefits-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
+  .benefits-layout { gap: 3rem; }
+
+  .benefits-intro.section-heading { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); column-gap: 4rem; row-gap: 1.25rem; align-items: end; }
+  .benefits-intro .eyebrow { grid-column: 1 / -1; padding-top: 0; }
+  .benefits-intro h2 { grid-column: 1; margin: 0; }
+  .benefits-intro h2 span { display: block; }
+  .benefits-intro .section-description { margin: 0; }
+  .benefits-start { margin-top: 1rem; }
 
   .solutions-bento {
     grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -195,8 +178,10 @@
     padding: 1.6rem;
   }
 
-  .solution-wide { grid-column: span 7; }
-  .solution-standard { grid-column: span 5; }
+  .solution-wide { grid-column: 1 / -1; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: stretch; gap: 3rem; }
+  .solution-wide .solution-art { grid-column: 2; grid-row: 1; min-height: 100%; aspect-ratio: auto; }
+  .solution-wide .solution-content { grid-column: 1; grid-row: 1; }
+  .solution-standard { grid-column: span 6; }
 
   .problem-layout {
     grid-template-columns: minmax(22rem, 0.82fr) minmax(32rem, 1.18fr);
@@ -207,14 +192,6 @@
     position: sticky;
     top: calc(var(--header-height) + 2rem);
     align-self: start;
-  }
-
-  .applications-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .application-card:last-child {
-    grid-column: auto;
   }
 
   .process-timeline {
@@ -240,11 +217,6 @@
     height: 1px;
   }
 
-  .why-grid {
-    grid-template-columns: minmax(23rem, 0.85fr) minmax(0, 1.15fr);
-    gap: 8rem;
-  }
-
   .faq-grid {
     grid-template-columns: minmax(20rem, 0.78fr) minmax(30rem, 1.22fr);
     gap: 5rem;
@@ -268,6 +240,10 @@
     grid-template-columns: minmax(0, 1.2fr) minmax(24rem, 0.8fr);
     gap: 7rem;
   }
+}
+
+@media (min-width: 80rem) {
+  .benefits-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
 
 @media (prefers-reduced-motion: reduce) {

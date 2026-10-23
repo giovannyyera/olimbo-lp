@@ -1,0 +1,14 @@
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: DENY
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+/brand/olimbo-favicon-cursor.png
+  Cache-Control: no-store, max-age=0
+
+/brand/olimbo-apple-touch-icon-transparent.png
+  Cache-Control: no-store, max-age=0
+
+/favicon.ico
+  Cache-Control: no-store, max-age=0

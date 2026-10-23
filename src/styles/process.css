@@ -1,0 +1,29 @@
+.process-section { background: var(--olimbo-ivory); }
+.process-timeline { display: grid; margin: 0; padding: 0; list-style: none; grid-template-columns: minmax(0, 1fr); }
+.process-timeline li { display: grid; grid-template-columns: 3.5rem minmax(0, 1fr); gap: 1rem; min-height: 11rem; }
+.process-marker { position: relative; display: flex; justify-content: center; }
+.process-marker span { position: relative; z-index: 1; display: grid; width: 2.5rem; height: 2.5rem; place-items: center; border: 1px solid var(--olimbo-black); border-radius: 50%; background: var(--olimbo-ivory); font-size: 0.65rem; font-weight: 800; }
+.process-marker i { position: absolute; top: 2.5rem; bottom: 0; left: 50%; width: 1px; background: var(--olimbo-line); }
+.process-timeline li:last-child .process-marker i { display: none; }
+.process-timeline h3 { margin: 0.35rem 0 0; font-size: 1.35rem; letter-spacing: -0.035em; }
+.process-timeline p { max-width: 33rem; margin: 0.7rem 0 0; color: var(--olimbo-graphite); line-height: 1.65; }
+
+.process-marker span {
+  border-color: rgb(11 11 11 / 20%);
+  background: var(--olimbo-gold);
+  box-shadow: 0 0 0 0.45rem var(--olimbo-ivory);
+  transition: background-color 220ms ease, box-shadow 220ms ease;
+}
+
+.process-marker i {
+  background: linear-gradient(var(--olimbo-gold-deep), var(--olimbo-line));
+}
+
+@media (hover: hover) {
+  .process-timeline li:hover .process-marker span {
+    background: var(--olimbo-black);
+    color: var(--olimbo-gold);
+    box-shadow: 0 0 0 0.45rem var(--olimbo-ivory), 0 0 0 0.5rem var(--olimbo-line);
+  }
+
+}

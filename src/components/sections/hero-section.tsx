@@ -1,7 +1,9 @@
 import { siteConfig } from "@/config/site";
+import { creatives } from "@/config/creatives";
 
-import { ContactCta } from "../contact-cta";
-import { HeroProductVisual } from "../visuals/hero-product-visual";
+import { ContactCta } from "@/components/contact-cta";
+import { HeroProductVisual } from "@/components/visuals/hero-product-visual";
+import { ServicePreview } from "@/components/visuals/service-preview";
 
 export function HeroSection() {
   return (
@@ -11,34 +13,30 @@ export function HeroSection() {
           <p className="eyebrow hero-eyebrow">
             SITES <span>•</span> SOFTWARES <span>•</span> AUTOMAÇÕES
           </p>
-          <h1>Seu negócio pode ir mais longe com a tecnologia certa.</h1>
+          <h1>Seu próximo passo merece uma <span>solução à altura.</span></h1>
           <p className="hero-description">
-            Criamos sites profissionais, sistemas personalizados e automações
-            para ajudar você a conquistar mais oportunidades, reduzir tarefas
-            manuais e transformar ideias em soluções reais.
+            Um site que valoriza seu trabalho. Um sistema que organiza a operação.
+            Uma automação que libera seu tempo. A Olimbo desenvolve a tecnologia
+            que faz sentido para o seu negócio.
           </p>
           <div className="hero-actions">
             <ContactCta
               contact={siteConfig.contact.whatsapp}
-              label="Quero tirar meu projeto do papel"
+              label="Vamos conversar sobre sua ideia"
             />
-            <ContactCta
-              contact={siteConfig.contact.whatsapp}
-              label="Conversar sobre as soluções"
-              variant="outline"
-            />
+            <a className="button button-outline" href="#solucoes">Explorar soluções <span aria-hidden="true">↗</span></a>
           </div>
           <p className="contact-note">
             {siteConfig.contact.whatsapp.note}
           </p>
         </div>
-        <HeroProductVisual />
+        <HeroProductVisual previews={creatives.map((creative) => <ServicePreview type={creative.id} key={creative.id} />)} />
       </div>
-      <div className="shell hero-capabilities" aria-label="Áreas de atuação">
-        <span>Sites profissionais</span>
-        <span>Software sob medida</span>
-        <span>Automação de processos</span>
-      </div>
+      <ul className="shell hero-capabilities" aria-label="Áreas de atuação">
+        <li>Presença que valoriza</li>
+        <li>Operação que faz sentido</li>
+        <li>Tempo para o que importa</li>
+      </ul>
     </section>
   );
 }

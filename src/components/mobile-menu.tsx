@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 import type { NavigationItem, WhatsAppContact } from "@/config/site";
 
-import { ContactCta } from "./contact-cta";
+import { ContactCta } from "@/components/contact-cta";
 
 type MobileMenuProps = {
   navigation: readonly NavigationItem[];

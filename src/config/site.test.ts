@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 
 import { siteConfig } from "./site";
+import { projectOffer } from "./project-offer";
 import { createWhatsAppUrl } from "../lib/whatsapp";
 
 describe("siteConfig", () => {
@@ -19,9 +20,7 @@ describe("siteConfig", () => {
     expect(siteConfig.benefits).toHaveLength(4);
     expect(siteConfig.solutions).toHaveLength(4);
     expect(siteConfig.problemSolutions).toHaveLength(5);
-    expect(siteConfig.applications).toHaveLength(3);
     expect(siteConfig.process).toHaveLength(4);
-    expect(siteConfig.principles).toHaveLength(5);
     expect(siteConfig.faq).toHaveLength(7);
     expect(
       siteConfig.solutions.every(({ whatsappMessage }) =>
@@ -37,6 +36,7 @@ describe("siteConfig", () => {
     for (const text of [
       message,
       ...siteConfig.solutions.map(({ whatsappMessage }) => whatsappMessage),
+      projectOffer.message,
     ]) {
       const href = createWhatsAppUrl(phone, text);
       expect(href).not.toBeNull();

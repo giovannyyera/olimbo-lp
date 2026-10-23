@@ -2,22 +2,19 @@ export const creatives = [
   {
     id: "website",
     label: "Sites",
-    title: "Uma presença que abre possibilidades.",
-    src: "/images/olimbo-websites.webp",
-    alt: "Profissional de interiores consulta um site de apresentação de projetos em um notebook no seu estúdio.",
+    title: "Uma presença à altura do seu negócio.",
+    description: "Design, conteúdo e navegação trabalhando pela sua próxima oportunidade.",
   },
   {
     id: "dashboard",
     label: "Sistemas",
-    title: "Cada parte do negócio em seu lugar.",
-    src: "/images/olimbo-software.webp",
-    alt: "Gestor consulta um sistema de organização de pedidos e clientes no computador do escritório.",
+    title: "Sua operação inteira na mesma direção.",
+    description: "Informações, processos e pessoas em um sistema feito para sua rotina.",
   },
   {
     id: "workflow",
     label: "Automações",
-    title: "Conexões que fazem a rotina fluir.",
-    src: "/images/olimbo-automation.webp",
-    alt: "Empreendedora prepara uma embalagem ao lado de um notebook com uma fila digital de pedidos e uma impressora de etiquetas.",
+    title: "Seu tempo nas tarefas que pedem você.",
+    description: "Etapas conectadas para reduzir o trabalho repetitivo entre ferramentas.",
   },
 ] as const;

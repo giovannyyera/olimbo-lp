@@ -5,7 +5,7 @@ import {
 } from "@/lib/structured-data";
 
 export function StructuredData() {
-  const faqData = createFaqStructuredData(siteConfig.faq);
+  const faqData = createFaqStructuredData(siteConfig.faq, siteConfig.url);
 
   return (
     <script
